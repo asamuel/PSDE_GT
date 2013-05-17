@@ -13,7 +13,7 @@ namespace PSDE_SERVICE.DataAccess
         {
             try
             {
-                return cnx.FincaInsert(fin.HaTotalFinca, fin.HaEfectiva, fin.UsoActualSuelo, fin.CodCliente, fin.CodCoordenada);
+                return cnx.FincaInsert(fin.HaTotalFinca, fin.HaEfectiva, fin.UsoActualSuelo, fin.CodCliente, fin.Coordenada_X_GMS,fin.Coordenada_X_UTM,fin.Coordenada_Y_GMS,fin.Coordenada_Y_UTM);
             }
             catch (Exception)
             {
@@ -26,7 +26,7 @@ namespace PSDE_SERVICE.DataAccess
         {
             try
             {
-                return cnx.FincaUpdate(fin.IdFinca, fin.HaTotalFinca, fin.HaEfectiva,fin.UsoActualSuelo,fin.CodCliente,fin.CodCoordenada);
+                return cnx.FincaUpdate(fin.IdFinca, fin.HaTotalFinca, fin.HaEfectiva, fin.UsoActualSuelo, fin.CodCliente, fin.Coordenada_X_GMS, fin.Coordenada_X_UTM, fin.Coordenada_Y_GMS, fin.Coordenada_Y_UTM);
             }
             catch (Exception)
             {

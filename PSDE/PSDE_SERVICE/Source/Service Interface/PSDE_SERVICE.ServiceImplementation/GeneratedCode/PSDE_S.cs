@@ -289,21 +289,7 @@ namespace PSDE_SERVICE.ServiceImplementation
 			return null;
 		}
 
-		public virtual PSDE_SERVICE.MessageContracts.CoordenadaRS Agregar_Coordenada(PSDE_SERVICE.MessageContracts.CoordenadaRQ request)
-		{
-			return null;
-		}
-
-		public virtual PSDE_SERVICE.MessageContracts.CoordenadaRS Modificar_Coordenada(PSDE_SERVICE.MessageContracts.CoordenadaRQ request)
-		{
-			return null;
-		}
-
-		public virtual PSDE_SERVICE.MessageContracts.CoordenadaRS Eliminar_Coordenada(PSDE_SERVICE.MessageContracts.CoordenadaRQ request)
-		{
-			return null;
-		}
-
+	
 		public virtual PSDE_SERVICE.MessageContracts.ClienteRS Modificar_Cliente(PSDE_SERVICE.MessageContracts.ClienteRQ request)
 		{
 			return null;
@@ -741,26 +727,6 @@ namespace PSDE_SERVICE.ServiceImplementation
             return res;
         }
 
-        public override MessageContracts.CoordenadaRS Agregar_Coordenada(MessageContracts.CoordenadaRQ request)
-        {
-            MessageContracts.CoordenadaRS res = new MessageContracts.CoordenadaRS();
-            res.ResponseRS = DataAccess.Coordenada_DAL.insert(request.Coordenada);
-            return res;
-        }
-
-        public override MessageContracts.CoordenadaRS Modificar_Coordenada(MessageContracts.CoordenadaRQ request)
-        {
-            MessageContracts.CoordenadaRS res = new MessageContracts.CoordenadaRS();
-            res.ResponseRS = DataAccess.Coordenada_DAL.update(request.Coordenada);
-            return res;
-        }
-
-        public override MessageContracts.CoordenadaRS Eliminar_Coordenada(MessageContracts.CoordenadaRQ request)
-        {
-            MessageContracts.CoordenadaRS res = new MessageContracts.CoordenadaRS();
-            res.ResponseRS = DataAccess.Coordenada_DAL.delete(request.Coordenada);
-            return res;
-        }
 
         public override MessageContracts.ClienteRS Agregar_Cliente(MessageContracts.ClienteRQ request)
         {

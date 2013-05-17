@@ -56,9 +56,6 @@
         <operationMoniker Id="dd974934-4047-4311-adce-5c02ce6f37e0" />
         <operationMoniker Id="90ab6b3d-d938-4452-a5ff-3d0e6d0a3f66" />
         <operationMoniker Id="4c659b31-672b-4969-a397-622b15baacb9" />
-        <operationMoniker Id="b16f182c-b6dd-4875-af8e-7641cb00b9f6" />
-        <operationMoniker Id="8caa61f4-115e-465f-8b68-e198eb3fddd7" />
-        <operationMoniker Id="70325fdb-fb8d-4058-afb3-b3a6fb260fed" />
         <operationMoniker Id="0794b3c5-5342-4f6f-9ec0-8cac52f8a20b" />
         <operationMoniker Id="774aff58-f4c9-4450-bf38-d2ae5528cca9" />
         <operationMoniker Id="d86c81cc-7a52-4eed-8cba-802f5d67551d" />
@@ -347,21 +344,6 @@
     <operation Id="90ab6b3d-d938-4452-a5ff-3d0e6d0a3f66" name="Eliminar_Historial" action="http://PSDE.Model/2013/PSDE_SC/PSDE_SC/Eliminar_Historial" isOneWay="false" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WCFOperationContract&quot;&gt;&#xD;&#xA;    &lt;ProtectionLevel&gt;None&lt;/ProtectionLevel&gt;&#xD;&#xA;    &lt;IsInitiating&gt;true&lt;/IsInitiating&gt;&#xD;&#xA;    &lt;IsTerminating&gt;false&lt;/IsTerminating&gt;&#xD;&#xA;    &lt;AsyncPattern&gt;false&lt;/AsyncPattern&gt;&#xD;&#xA;    &lt;ReplyAction /&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;">
       <response>
         <messageMoniker Id="c7996984-959a-4347-a9fe-2ec0c58f23c3" />
-      </response>
-    </operation>
-    <operation Id="b16f182c-b6dd-4875-af8e-7641cb00b9f6" name="Agregar_Coordenada" action="Agregar_Coordenada" isOneWay="false" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WCFOperationContract&quot;&gt;&#xD;&#xA;    &lt;ProtectionLevel&gt;None&lt;/ProtectionLevel&gt;&#xD;&#xA;    &lt;IsInitiating&gt;true&lt;/IsInitiating&gt;&#xD;&#xA;    &lt;IsTerminating&gt;false&lt;/IsTerminating&gt;&#xD;&#xA;    &lt;AsyncPattern&gt;false&lt;/AsyncPattern&gt;&#xD;&#xA;    &lt;ReplyAction /&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;">
-      <response>
-        <messageMoniker Id="1229ef21-ad32-45ae-8416-5402fc7781d7" />
-      </response>
-    </operation>
-    <operation Id="8caa61f4-115e-465f-8b68-e198eb3fddd7" name="Modificar_Coordenada" action="Modificar_Coordenada" isOneWay="false" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WCFOperationContract&quot;&gt;&#xD;&#xA;    &lt;ProtectionLevel&gt;None&lt;/ProtectionLevel&gt;&#xD;&#xA;    &lt;IsInitiating&gt;true&lt;/IsInitiating&gt;&#xD;&#xA;    &lt;IsTerminating&gt;false&lt;/IsTerminating&gt;&#xD;&#xA;    &lt;AsyncPattern&gt;false&lt;/AsyncPattern&gt;&#xD;&#xA;    &lt;ReplyAction /&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;">
-      <response>
-        <messageMoniker Id="1229ef21-ad32-45ae-8416-5402fc7781d7" />
-      </response>
-    </operation>
-    <operation Id="70325fdb-fb8d-4058-afb3-b3a6fb260fed" name="Eliminar_Coordenada" action="Eliminar_Coordenada" isOneWay="false" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WCFOperationContract&quot;&gt;&#xD;&#xA;    &lt;ProtectionLevel&gt;None&lt;/ProtectionLevel&gt;&#xD;&#xA;    &lt;IsInitiating&gt;true&lt;/IsInitiating&gt;&#xD;&#xA;    &lt;IsTerminating&gt;false&lt;/IsTerminating&gt;&#xD;&#xA;    &lt;AsyncPattern&gt;false&lt;/AsyncPattern&gt;&#xD;&#xA;    &lt;ReplyAction /&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;">
-      <response>
-        <messageMoniker Id="1229ef21-ad32-45ae-8416-5402fc7781d7" />
       </response>
     </operation>
     <operation Id="774aff58-f4c9-4450-bf38-d2ae5528cca9" name="Agregar_Cliente" action="Agregar_Cliente" isOneWay="false" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WCFOperationContract&quot;&gt;&#xD;&#xA;    &lt;ProtectionLevel&gt;None&lt;/ProtectionLevel&gt;&#xD;&#xA;    &lt;IsInitiating&gt;true&lt;/IsInitiating&gt;&#xD;&#xA;    &lt;IsTerminating&gt;false&lt;/IsTerminating&gt;&#xD;&#xA;    &lt;AsyncPattern&gt;false&lt;/AsyncPattern&gt;&#xD;&#xA;    &lt;ReplyAction /&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;">
@@ -699,21 +681,6 @@
       </requestFor>
       <messageParts>
         <dataContractMessagePart Id="18bb4e40-c637-4923-bb88-1ff889f7aa32" name="Historial" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WCFDataContractMessagePart&quot;&gt;&#xD;&#xA;    &lt;Namespace&gt;http://PSDE.Model/2013/PSDE_SC&lt;/Namespace&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;" type="modelbus://Microsoft.Practices.ServiceFactory.DataContracts.DataContractDslAdapter/PSDE_DC/Historial/.\PSDE_DC.datacontract%2f0df753c7-0e2b-40b9-b169-d4b065662a05" />
-      </messageParts>
-    </message>
-    <message Id="0c0d2190-8373-4e8d-be67-04fe7daffc52" name="CoordenadaRQ" namespace="http://PSDE.Model/2013/PSDE_SC" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WCFMessageContract&quot;&gt;&#xD;&#xA;    &lt;IsWrapped&gt;false&lt;/IsWrapped&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;">
-      <requestFor>
-        <operationMoniker Id="b16f182c-b6dd-4875-af8e-7641cb00b9f6" />
-        <operationMoniker Id="8caa61f4-115e-465f-8b68-e198eb3fddd7" />
-        <operationMoniker Id="70325fdb-fb8d-4058-afb3-b3a6fb260fed" />
-      </requestFor>
-      <messageParts>
-        <dataContractMessagePart Id="a0748d5e-3f15-4f52-8cf3-8a1140987887" name="Coordenada" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WCFDataContractMessagePart&quot;&gt;&#xD;&#xA;    &lt;Namespace&gt;http://PSDE.Model/2013/PSDE_SC&lt;/Namespace&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;" type="modelbus://Microsoft.Practices.ServiceFactory.DataContracts.DataContractDslAdapter/PSDE_DC/Coordenada/.\PSDE_DC.datacontract%2f1654d498-a97c-486e-8eca-24c6980e8960" />
-      </messageParts>
-    </message>
-    <message Id="1229ef21-ad32-45ae-8416-5402fc7781d7" name="CoordenadaRS" namespace="http://PSDE.Model/2013/PSDE_SC" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WCFMessageContract&quot;&gt;&#xD;&#xA;    &lt;IsWrapped&gt;false&lt;/IsWrapped&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;">
-      <messageParts>
-        <primitiveMessagePart Id="612749eb-4303-435b-bd04-8f369d95b519" name="ResponseRS" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WCFPrimitiveMessagePart&quot;&gt;&#xD;&#xA;    &lt;Namespace&gt;http://PSDE.Model/2013/PSDE_SC&lt;/Namespace&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;" type="System.Int32" isNullable="false" isCollection="false" />
       </messageParts>
     </message>
     <message Id="019c8375-08ab-4b19-b1c3-fb565bbb8dd1" name="ClienteRQ" namespace="http://PSDE.Model/2013/PSDE_SC" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WCFMessageContract&quot;&gt;&#xD;&#xA;    &lt;IsWrapped&gt;false&lt;/IsWrapped&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;">

@@ -178,15 +178,6 @@ namespace PSDE_SERVICE.ServiceContracts
 [WCF::OperationContract(IsTerminating = false, IsInitiating = true, IsOneWay = false, AsyncPattern = false, Action = "http://PSDE.Model/2013/PSDE_SC/PSDE_SC/Buscar_Historial", ProtectionLevel = ProtectionLevel.None)]
 		PSDE_SERVICE.MessageContracts.HistorialRS Buscar_Historial(PSDE_SERVICE.MessageContracts.HistorialRQ request);
 		
-[WCF::OperationContract(IsTerminating = false, IsInitiating = true, IsOneWay = false, AsyncPattern = false, Action = "Agregar_Coordenada", ProtectionLevel = ProtectionLevel.None)]
-		PSDE_SERVICE.MessageContracts.CoordenadaRS Agregar_Coordenada(PSDE_SERVICE.MessageContracts.CoordenadaRQ request);
-		
-[WCF::OperationContract(IsTerminating = false, IsInitiating = true, IsOneWay = false, AsyncPattern = false, Action = "Modificar_Coordenada", ProtectionLevel = ProtectionLevel.None)]
-		PSDE_SERVICE.MessageContracts.CoordenadaRS Modificar_Coordenada(PSDE_SERVICE.MessageContracts.CoordenadaRQ request);
-		
-[WCF::OperationContract(IsTerminating = false, IsInitiating = true, IsOneWay = false, AsyncPattern = false, Action = "Eliminar_Coordenada", ProtectionLevel = ProtectionLevel.None)]
-		PSDE_SERVICE.MessageContracts.CoordenadaRS Eliminar_Coordenada(PSDE_SERVICE.MessageContracts.CoordenadaRQ request);
-		
 [WCF::OperationContract(IsTerminating = false, IsInitiating = true, IsOneWay = false, AsyncPattern = false, Action = "Modificar_Cliente", ProtectionLevel = ProtectionLevel.None)]
 		PSDE_SERVICE.MessageContracts.ClienteRS Modificar_Cliente(PSDE_SERVICE.MessageContracts.ClienteRQ request);
 		
