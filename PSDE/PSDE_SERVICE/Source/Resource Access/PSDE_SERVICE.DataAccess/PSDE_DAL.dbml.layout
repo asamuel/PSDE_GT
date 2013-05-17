@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15.625, 19.375" name="PSDE_DAL">
+  <DataContextMoniker Name="/PSDE_DALDataContext" />
+  <nestedChildShapes>
+    <classShape Id="468a87ac-a5ea-43df-8a05-2ae775246445" absoluteBounds="6.625, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/PSDE_DALDataContext/CategoriaUsuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c904689-e452-492d-bf1e-ac29cdb5061b" absoluteBounds="6.6400000000000006, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="84c7602f-5204-49ae-8064-9e9f88387e61" absoluteBounds="12.75, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/PSDE_DALDataContext/FuenteFinanciamiento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16d069fd-9203-4e89-8751-599d336eef08" absoluteBounds="12.765, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c77f3877-46b6-4b7f-a2f1-1533c03a3b59" absoluteBounds="7.375, 11.375, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/PSDE_DALDataContext/Departamento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="69748ac6-0581-46d3-8c81-804a25fa3c5c" absoluteBounds="7.3900000000000006, 11.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c9479dd-1cd1-4e60-8b29-903eda46bcd0" absoluteBounds="7.25, 8.875, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/PSDE_DALDataContext/Municipio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c45a90e-ee7d-4907-9ca5-ada0974cde73" absoluteBounds="7.2650000000000006, 9.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.3125 : 11.375); (8.3125 : 10.1355004882813)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/Departamento/Departamento_Municipio" />
+      <nodes>
+        <classShapeMoniker Id="c77f3877-46b6-4b7f-a2f1-1533c03a3b59" />
+        <classShapeMoniker Id="1c9479dd-1cd1-4e60-8b29-903eda46bcd0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="858db769-d284-4322-99f5-450498209313" absoluteBounds="10.5, 9.125, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/PSDE_DALDataContext/Sucursal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="80062276-b07d-43ac-b315-7cce75967134" absoluteBounds="10.515, 9.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.25 : 9.69314697265625); (10.5 : 9.69314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/Municipio/Municipio_Sucursal" />
+      <nodes>
+        <classShapeMoniker Id="1c9479dd-1cd1-4e60-8b29-903eda46bcd0" />
+        <classShapeMoniker Id="858db769-d284-4322-99f5-450498209313" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0dab5883-0cb2-4693-abf2-050d5bf695e5" absoluteBounds="13, 5.75, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/PSDE_DALDataContext/SectorProductivo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="705aa642-ac25-4742-8e3a-3f4160b2a994" absoluteBounds="13.015, 6.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7f3e40e7-7a32-4d03-af31-4b6b0f2e85c8" absoluteBounds="9.875, 5.75, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/PSDE_DALDataContext/ProductoFinanciero" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7ac44eb-8b24-4975-adc8-8ed3f711411c" absoluteBounds="9.89, 6.2100000000000009, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b35be609-5488-48f9-94ae-5ab921a33722" absoluteBounds="9.625, 2.75, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/PSDE_DALDataContext/Usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="18258eb1-f6ba-45c4-bd42-e1efaf91bab0" absoluteBounds="9.64, 3.2100000000000009, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.46875 : 1.8862939453125); (8.46875 : 4.02005126953125); (9.625 : 4.02005126953125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/CategoriaUsuario/CategoriaUsuario_Usuario" />
+      <nodes>
+        <classShapeMoniker Id="468a87ac-a5ea-43df-8a05-2ae775246445" />
+        <classShapeMoniker Id="b35be609-5488-48f9-94ae-5ab921a33722" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.3342307692308 : 5.2901025390625); (10.3342307692308 : 5.5401025390625); (10.9296153846154 : 5.5401025390625); (10.9296153846154 : 5.2901025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/Usuario/Usuario_Usuario" />
+      <nodes>
+        <classShapeMoniker Id="b35be609-5488-48f9-94ae-5ab921a33722" />
+        <classShapeMoniker Id="b35be609-5488-48f9-94ae-5ab921a33722" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="21cbc3df-b62c-4b06-9e02-7bbcfb4e1149" absoluteBounds="0.5, 12.125, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/PSDE_DALDataContext/TipoEvento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b894126a-8283-4814-8072-ca2714bec7a1" absoluteBounds="0.51500000000000012, 12.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="089f0a4d-6aa2-48e2-9395-6cbb09fcc4e3" absoluteBounds="2, 9, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/PSDE_DALDataContext/Eventos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db0c09ab-dc60-4154-a10f-a863a2f4f7bf" absoluteBounds="2.0149999999999997, 9.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.25 : 12.125); (2.25 : 10.3862939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/TipoEvento/TipoEvento_Eventos" />
+      <nodes>
+        <classShapeMoniker Id="21cbc3df-b62c-4b06-9e02-7bbcfb4e1149" />
+        <classShapeMoniker Id="089f0a4d-6aa2-48e2-9395-6cbb09fcc4e3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="06b6de3e-8e68-43db-8410-dcb66c3cebc1" absoluteBounds="0.625, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/PSDE_DALDataContext/Indicador" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37303486-3f9d-4d66-8966-e4cbbd91b757" absoluteBounds="0.63999999999999968, 0.96000000000000085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7634ab64-0d19-4195-b6c8-b70850df5b65" absoluteBounds="13.125, 7.875, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/PSDE_DALDataContext/Convenio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="629dddba-09d8-4c38-a327-9ee9218b10d0" absoluteBounds="13.14, 8.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="35317645-435d-4185-905d-e53b725cdce3" absoluteBounds="13.125, 3, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/PSDE_DALDataContext/DetalleConvenio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dc9dd2d9-ac87-480e-a0ba-226ea18902fd" absoluteBounds="13.14, 3.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(15.09375 : 7.875); (15.09375 : 4.9631982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/Convenio/Convenio_DetalleConvenio" />
+      <nodes>
+        <classShapeMoniker Id="7634ab64-0d19-4195-b6c8-b70850df5b65" />
+        <classShapeMoniker Id="35317645-435d-4185-905d-e53b725cdce3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.9375 : 1.69399251302083); (13.9375 : 3)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/FuenteFinanciamiento/FuenteFinanciamiento_DetalleConvenio" />
+      <nodes>
+        <classShapeMoniker Id="84c7602f-5204-49ae-8064-9e9f88387e61" />
+        <classShapeMoniker Id="35317645-435d-4185-905d-e53b725cdce3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.875 : 5.75091745577925); (12.25 : 5.37591745577925); (12.25 : 3.98159912109375); (13.125 : 3.98159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/ProductoFinanciero/ProductoFinanciero_DetalleConvenio" />
+      <nodes>
+        <classShapeMoniker Id="7f3e40e7-7a32-4d03-af31-4b6b0f2e85c8" />
+        <classShapeMoniker Id="35317645-435d-4185-905d-e53b725cdce3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d0e99ee6-c487-4a87-81cb-e6176a168a2a" absoluteBounds="9.625, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/PSDE_DALDataContext/Historial" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9cbf83a6-bb70-4f48-a934-94dce7e7f7b0" absoluteBounds="9.64, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.625 : 2.75); (10.625 : 2.07859537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/Usuario/Usuario_Historial" />
+      <nodes>
+        <classShapeMoniker Id="b35be609-5488-48f9-94ae-5ab921a33722" />
+        <classShapeMoniker Id="d0e99ee6-c487-4a87-81cb-e6176a168a2a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9a35662f-9641-41fe-9ace-87612242c543" absoluteBounds="6.25, 3, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/PSDE_DALDataContext/Cliente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e57d7b7a-42e7-4781-b073-109f7efef777" absoluteBounds="6.265, 3.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.75 : 8.875); (7.75 : 5.92470540364583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/Municipio/Municipio_Cliente" />
+      <nodes>
+        <classShapeMoniker Id="1c9479dd-1cd1-4e60-8b29-903eda46bcd0" />
+        <classShapeMoniker Id="9a35662f-9641-41fe-9ace-87612242c543" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9f29273f-1849-44f9-afd2-385395e4cb16" absoluteBounds="4, 2.375, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/PSDE_DALDataContext/Contrato" />
+      <nestedChildShapes>
+        <elementListCompartment Id="427607da-d179-4e93-8982-e5dc070fe69f" absoluteBounds="4.015, 2.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.25 : 3.89296590169271); (6 : 3.89296590169271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/Cliente/Cliente_Contrato" />
+      <nodes>
+        <classShapeMoniker Id="9a35662f-9641-41fe-9ace-87612242c543" />
+        <classShapeMoniker Id="9f29273f-1849-44f9-afd2-385395e4cb16" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.125 : 8.34375); (12.1770833333333 : 8.34375 : JumpStart); (12.0104166666667 : 8.34375 : JumpEnd); (7.83333333333333 : 8.34375 : JumpStart); (7.66666666666667 : 8.34375 : JumpEnd); (6.20833333333333 : 8.34375 : JumpStart); (6.04166666666667 : 8.34375 : JumpEnd); (5.66145833333333 : 8.34375 : JumpStart); (5.49479166666667 : 8.34375 : JumpEnd); (5.03125 : 8.34375); (5.03125 : 4.78593180338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/Convenio/Convenio_Contrato" />
+      <nodes>
+        <classShapeMoniker Id="7634ab64-0d19-4195-b6c8-b70850df5b65" />
+        <classShapeMoniker Id="9f29273f-1849-44f9-afd2-385395e4cb16" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.78125 : 5.75); (11.78125 : 2.53125); (10.7083333333333 : 2.53125 : JumpStart); (10.5416666666667 : 2.53125 : JumpEnd); (6 : 2.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/ProductoFinanciero/ProductoFinanciero_Contrato" />
+      <nodes>
+        <classShapeMoniker Id="7f3e40e7-7a32-4d03-af31-4b6b0f2e85c8" />
+        <classShapeMoniker Id="9f29273f-1849-44f9-afd2-385395e4cb16" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.09375 : 9.125); (12.09375 : 2.6406275); (11.8645833333333 : 2.6406275 : JumpStart); (11.6979166666667 : 2.6406275 : JumpEnd); (10.7083333333333 : 2.6406275 : JumpStart); (10.5416666666667 : 2.6406275 : JumpEnd); (8.55208333333333 : 2.6406275 : JumpStart); (8.38541666666667 : 2.6406275 : JumpEnd); (6 : 2.6406275)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/Sucursal/Sucursal_Contrato" />
+      <nodes>
+        <classShapeMoniker Id="858db769-d284-4322-99f5-450498209313" />
+        <classShapeMoniker Id="9f29273f-1849-44f9-afd2-385395e4cb16" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.625 : 2.84375); (8.55208333333333 : 2.84375 : JumpStart); (8.38541666666667 : 2.84375 : JumpEnd); (6 : 2.84375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/Usuario/Usuario_Contrato" />
+      <nodes>
+        <classShapeMoniker Id="b35be609-5488-48f9-94ae-5ab921a33722" />
+        <classShapeMoniker Id="9f29273f-1849-44f9-afd2-385395e4cb16" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5c0f6e3e-6c6d-44d1-8a3e-261824539a55" absoluteBounds="3.625, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/PSDE_DALDataContext/GeneralDetalle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="07facca3-2d73-4f0a-9483-f2770690079e" absoluteBounds="3.6399999999999997, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.625 : 1.09699625651042); (3.625 : 1.09699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/Indicador/Indicador_GeneralDetalle" />
+      <nodes>
+        <classShapeMoniker Id="06b6de3e-8e68-43db-8410-dcb66c3cebc1" />
+        <classShapeMoniker Id="5c0f6e3e-6c6d-44d1-8a3e-261824539a55" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e4eee6dd-03ce-45fc-a5ee-855c37e9ab7c" absoluteBounds="4.375, 12, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/PSDE_DALDataContext/General" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b04c2280-01d5-46c0-8acc-09f4e67ddaff" absoluteBounds="4.39, 12.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.125 : 12); (6.125 : 1.29459757486979); (5.625 : 1.29459757486979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/General/General_GeneralDetalle" />
+      <nodes>
+        <classShapeMoniker Id="e4eee6dd-03ce-45fc-a5ee-855c37e9ab7c" />
+        <classShapeMoniker Id="5c0f6e3e-6c6d-44d1-8a3e-261824539a55" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.578125 : 4.78593180338542); (5.578125 : 12)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/Contrato/Contrato_General" />
+      <nodes>
+        <classShapeMoniker Id="9f29273f-1849-44f9-afd2-385395e4cb16" />
+        <classShapeMoniker Id="e4eee6dd-03ce-45fc-a5ee-855c37e9ab7c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.40625 : 10.3862939453125); (3.40625 : 13.5344962565104); (4.375 : 13.5344962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PSDE_DALDataContext/Eventos/Eventos_General" />
+      <nodes>
+        <classShapeMoniker Id="089f0a4d-6aa2-48e2-9395-6cbb09fcc4e3" />
+        <classShapeMoniker Id="e4eee6dd-03ce-45fc-a5ee-855c37e9ab7c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="36ec224d-4b4c-430b-bb19-ec2ed2e3af8a" absoluteBounds="1.375, 16.25, 2, 2.9247054036458344">
+      <DataClassMoniker Name="/PSDE_DALDataContext/VistaClienteLista" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4fc2db34-4973-4374-b79f-facbb89755c4" absoluteBounds="1.3900000000000001, 16.71, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="889ea681-b139-4a23-a6a4-350af638cf20" absoluteBounds="3.5, 16.25, 2, 2.5401025390625">
+      <DataClassMoniker Name="/PSDE_DALDataContext/VistaUsuarioLista" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a593560e-1019-47da-87f0-5940c32bca73" absoluteBounds="3.5149999999999997, 16.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9758e792-6118-414e-b932-3898593382b2" absoluteBounds="5.625, 16.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/PSDE_DALDataContext/VistaEventos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1c0b2c7-ee8b-47bb-bea2-13a73503e682" absoluteBounds="5.64, 16.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

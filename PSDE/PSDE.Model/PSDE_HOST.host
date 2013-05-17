@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hostDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="5645f231-d200-4b48-bdc9-2233346af467" namespace="http://PSDE.Model/2013/PSDE_HOST" xmlns="http://schemas.microsoft.com/dsltools/HostDesigner">
+  <hostApplications>
+    <hostApplication Id="9eafcd15-2a42-48d2-89af-d1053eaa3a84" name="PSDE_H" implementationProject="C:\PSDE\PSDE\PSDE_SERVICE\Tests\PSDE_SERVICE.Host" implementationTechnology="{44e8a8c3-3651-4932-bae3-1faf3684e2f3}|WCF|WCF Extensions">
+      <serviceDescriptions>
+        <serviceReference Id="615de3e8-8e4a-4d02-b5d6-b533a498ce11" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WcfServiceDescription&quot;&gt;&#xD;&#xA;    &lt;IsRequired&gt;true&lt;/IsRequired&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;" name="PSDE_SERVICE" serviceImplementationType="modelbus://Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractDslAdapter/PSDE_SC/PSDE_S/.\PSDE_SC.servicecontract%2f51698dc0-6a53-438f-bcd7-951dc8e5bab8">
+          <endpoints>
+            <endpoint Id="1d10b5e2-9367-4521-8ed5-9e11ff05a347" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WcfEndpoint&quot;&gt;&#xD;&#xA;    &lt;IsRequired&gt;basicHttpBinding&lt;/IsRequired&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;" address="basic" name="PSDEBasicEndpoint" />
+            <endpoint Id="2afb1350-97d7-4d11-9948-6d39d8200de2" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WcfEndpoint&quot;&gt;&#xD;&#xA;    &lt;IsRequired&gt;wsHttpBinding&lt;/IsRequired&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;" name="PSDEWSEndpoint" />
+          </endpoints>
+        </serviceReference>
+      </serviceDescriptions>
+    </hostApplication>
+  </hostApplications>
+</hostDesignerModel>

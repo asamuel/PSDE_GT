@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<ProjectMappingInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" FileName="ProjectMapping.xml" xmlns="http://schemas.microsoft.com/pag/project-mapping">
+  <ProjectMappingTables>
+    <ProjectMappingTable Name="PSDE_SERVICE">
+      <ProjectMappings>
+        <ProjectMapping ProjectId="52b46ada-fd97-4a0e-94b2-09d339db305c" ProjectPath="\GeneratedCode" ProjectName="PSDE_SERVICE.BusinessEntities">
+          <Roles>
+            <Role Name="BusinessEntityRole" />
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="26c9a290-ddaf-410d-baf9-5e36b5435d17" ProjectPath="\GeneratedCode" ProjectName="PSDE_SERVICE.BusinessLogic">
+          <Roles>
+            <Role Name="BusinessLogicRole" />
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="ae80ae8f-e9b7-445a-b384-d8da73689441" ProjectPath="\GeneratedCode" ProjectName="PSDE_SERVICE.DataAccess">
+          <Roles />
+        </ProjectMapping>
+        <ProjectMapping ProjectId="4768d61c-970d-464e-91fb-9b7a17cb9b9d" ProjectPath="\GeneratedCode" ProjectName="PSDE_SERVICE.DataContracts">
+          <Roles>
+            <Role Name="DataContractRole" />
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="656410f6-7838-4592-9138-26d10cfea3c0" ProjectPath="\GeneratedCode" ProjectName="PSDE_SERVICE.FaultContracts">
+          <Roles>
+            <Role Name="FaultContractRole" />
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="927735ab-0921-4770-b7e4-8c5c4f6bf984" ProjectPath="\GeneratedCode" ProjectName="PSDE_SERVICE.MessageContracts">
+          <Roles>
+            <Role Name="MessageContractRole" />
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="0411913e-508c-494f-af12-b387a15e0665" ProjectPath="\GeneratedCode" ProjectName="PSDE_SERVICE.ServiceImplementation">
+          <Roles>
+            <Role Name="ServiceRole" />
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="8c240ac1-f0a9-4132-a28d-6e47acec3c97" ProjectPath="\GeneratedCode" ProjectName="PSDE_SERVICE.ServiceContracts">
+          <Roles>
+            <Role Name="ServiceContractRole" />
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="bc1a2731-f465-44a6-bb0e-68a40550787d" ProjectPath="\GeneratedCode" ProjectName="PSDE_SERVICE.Host">
+          <Roles>
+            <Role Name="HostRole" />
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="c2fc0a20-035e-4b71-9103-733f59028f10" ProjectPath="\GeneratedCode" ProjectName="PSDE_SERVICE.Client">
+          <Roles>
+            <Role Name="ClientRole" />
+          </Roles>
+        </ProjectMapping>
+      </ProjectMappings>
+    </ProjectMappingTable>
+  </ProjectMappingTables>
+</ProjectMappingInformation>

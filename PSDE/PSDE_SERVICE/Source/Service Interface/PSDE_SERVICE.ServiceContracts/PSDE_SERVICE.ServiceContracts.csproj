@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C240AC1-F0A9-4132-A28D-6E47ACEC3C97}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PSDE_SERVICE.ServiceContracts</RootNamespace>
+    <AssemblyName>PSDE_SERVICE.ServiceContracts.ServiceContracts</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="GeneratedCode\IPSDE_SC.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PSDE_SERVICE.DataContracts\PSDE_SERVICE.DataContracts.csproj">
+      <Project>{4768D61C-970D-464E-91FB-9B7A17CB9B9D}</Project>
+      <Name>PSDE_SERVICE.DataContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PSDE_SERVICE.FaultContracts\PSDE_SERVICE.FaultContracts.csproj">
+      <Project>{656410F6-7838-4592-9138-26D10CFEA3C0}</Project>
+      <Name>PSDE_SERVICE.FaultContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PSDE_SERVICE.MessageContracts\PSDE_SERVICE.MessageContracts.csproj">
+      <Project>{927735AB-0921-4770-B7E4-8C5C4F6BF984}</Project>
+      <Name>PSDE_SERVICE.MessageContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Roles="ServiceContractRole" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hostDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PSDE_HOST">
+  <hostDesignerModelMoniker Id="5645f231-d200-4b48-bdc9-2233346af467" />
+  <nestedChildShapes>
+    <hostApplicationShape Id="2e4d1caa-9925-494b-92bd-a1bfc580070a" absoluteBounds="0.5, 1.375, 1.5, 0.375">
+      <hostApplicationMoniker name="/5645f231-d200-4b48-bdc9-2233346af467/PSDE_H" />
+    </hostApplicationShape>
+    <serviceDescriptionShape Id="a9099eac-ba11-4118-8938-67121627cfba" absoluteBounds="0.5, 2.375, 1.5, 0.375">
+      <serviceReferenceMoniker name="/5645f231-d200-4b48-bdc9-2233346af467/PSDE_H/PSDE_SERVICE" />
+      <relativeChildShapes>
+        <endpointPortShape Id="01df74ce-725e-4bb8-801b-ee53183d53a5" absoluteBounds="0.71875, 2.625, 0.25, 0.25">
+          <endpointMoniker Id="1d10b5e2-9367-4521-8ed5-9e11ff05a347" />
+        </endpointPortShape>
+        <endpointPortShape Id="8815effa-f7df-4e3d-843c-788d0dd9d7d3" absoluteBounds="1.5625, 2.625, 0.25, 0.25">
+          <endpointMoniker Id="2afb1350-97d7-4d11-9948-6d39d8200de2" />
+        </endpointPortShape>
+      </relativeChildShapes>
+    </serviceDescriptionShape>
+    <serviceConnector edgePoints="[(1.25 : 1.75); (1.25 : 2.375)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="fcb7dde6-61aa-4b26-832a-bd9c8244de30">
+      <nodes>
+        <hostApplicationShapeMoniker Id="2e4d1caa-9925-494b-92bd-a1bfc580070a" />
+        <serviceDescriptionShapeMoniker Id="a9099eac-ba11-4118-8938-67121627cfba" />
+      </nodes>
+    </serviceConnector>
+  </nestedChildShapes>
+</hostDesignerDiagram>

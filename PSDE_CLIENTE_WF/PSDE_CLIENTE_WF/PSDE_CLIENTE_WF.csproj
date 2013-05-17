@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{591F4605-EC8D-44EB-A6E5-3B382D087BBA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PSDE_CLIENTE_WF</RootNamespace>
+    <AssemblyName>PSDE_CLIENTE_WF</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dotnetrix.TabControl">
+      <HintPath>..\..\..\..\..\Downloads\Dotnetrix.TabControl\Dotnetrix.TabControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Categorias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Categorias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteWF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteWF.Designer.cs">
+      <DependentUpon>ClienteWF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoWF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoWF.Designer.cs">
+      <DependentUpon>EmpleadoWF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuenteFinanciamientoWF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuenteFinanciamientoWF.Designer.cs">
+      <DependentUpon>FuenteFinanciamientoWF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\PSDE_SERVICE\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ClienteWF.resx">
+      <DependentUpon>ClienteWF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoWF.resx">
+      <DependentUpon>EmpleadoWF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuenteFinanciamientoWF.resx">
+      <DependentUpon>FuenteFinanciamientoWF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Categorias.xsc">
+      <DependentUpon>Categorias.xsd</DependentUpon>
+    </None>
+    <None Include="Categorias.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Categorias.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Categorias.xss">
+      <DependentUpon>Categorias.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\PSDE_SERVICE\PSDE_CLIENTE_WF.PSDE_SERVICE.CategoriasUsuarios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PSDE_SERVICE\PSDE_CLIENTE_WF.PSDE_SERVICE.ListaVistaClientes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PSDE_SERVICE\PSDE_CLIENTE_WF.PSDE_SERVICE.ListaVistaEventos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PSDE_SERVICE\PSDE_CLIENTE_WF.PSDE_SERVICE.ListaVistaUsuarios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PSDE_SERVICE\PSDE_CLIENTE_WF.PSDE_SERVICE.Municipios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PSDE_SERVICE\PSDE_S.wsdl" />
+    <None Include="Service References\PSDE_SERVICE\PSDE_SERVICE.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PSDE_SERVICE\PSDE_SERVICE1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PSDE_SERVICE\PSDE_SERVICE2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\PSDE_SERVICE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PSDE_SERVICE\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PSDE_SERVICE\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PSDE_SERVICE\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

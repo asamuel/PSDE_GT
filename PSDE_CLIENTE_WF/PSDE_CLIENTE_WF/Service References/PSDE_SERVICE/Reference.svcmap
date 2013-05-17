@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d63c504d-e6e7-4b34-b6ee-fffff1364bc0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PSDE_SERVICE.xsd" MetadataType="Schema" ID="57dcf55f-fae9-4e98-9c7e-06befbafbab5" SourceId="1" SourceUrl="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc?xsd=xsd1" />
+    <MetadataFile FileName="PSDE_SERVICE1.xsd" MetadataType="Schema" ID="a3c685a9-792a-4a3e-859a-c3b04b24d2b4" SourceId="1" SourceUrl="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc?xsd=xsd0" />
+    <MetadataFile FileName="PSDE_S.wsdl" MetadataType="Wsdl" ID="dd9e55e0-0a6a-4e69-9c63-80cceeeb4f23" SourceId="1" SourceUrl="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc?wsdl" />
+    <MetadataFile FileName="PSDE_SERVICE2.xsd" MetadataType="Schema" ID="7e993bfd-d5b1-4ff3-b216-550f0276574d" SourceId="1" SourceUrl="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

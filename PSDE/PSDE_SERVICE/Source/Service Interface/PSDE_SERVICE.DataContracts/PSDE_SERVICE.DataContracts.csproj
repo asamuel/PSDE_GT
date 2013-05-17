@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4768D61C-970D-464E-91FB-9B7A17CB9B9D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PSDE_SERVICE.DataContracts</RootNamespace>
+    <AssemblyName>PSDE_SERVICE.DataContracts.DataContracts</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="GeneratedCode\CategoriasUsuarios.cs" />
+    <Compile Include="GeneratedCode\CategoriaUsuario.cs" />
+    <Compile Include="GeneratedCode\Cliente.cs" />
+    <Compile Include="GeneratedCode\Clientes.cs" />
+    <Compile Include="GeneratedCode\Contrato.cs" />
+    <Compile Include="GeneratedCode\Contratos.cs" />
+    <Compile Include="GeneratedCode\Convenio.cs" />
+    <Compile Include="GeneratedCode\Convenios.cs" />
+    <Compile Include="GeneratedCode\Coordenada.cs" />
+    <Compile Include="GeneratedCode\Coordenadas.cs" />
+    <Compile Include="GeneratedCode\Departamento.cs" />
+    <Compile Include="GeneratedCode\Departamentos.cs" />
+    <Compile Include="GeneratedCode\DetalleConvenio.cs" />
+    <Compile Include="GeneratedCode\DetallesConvenio.cs" />
+    <Compile Include="GeneratedCode\Evento.cs" />
+    <Compile Include="GeneratedCode\Eventos.cs" />
+    <Compile Include="GeneratedCode\Finca.cs" />
+    <Compile Include="GeneratedCode\Fincas.cs" />
+    <Compile Include="GeneratedCode\FuenteFinanciamiento.cs" />
+    <Compile Include="GeneratedCode\FuentesFinanciamiento.cs" />
+    <Compile Include="GeneratedCode\General.cs" />
+    <Compile Include="GeneratedCode\GeneralDetalle.cs" />
+    <Compile Include="GeneratedCode\GeneralDetalles.cs" />
+    <Compile Include="GeneratedCode\Generales.cs" />
+    <Compile Include="GeneratedCode\Historial.cs" />
+    <Compile Include="GeneratedCode\Historiales.cs" />
+    <Compile Include="GeneratedCode\Indicador.cs" />
+    <Compile Include="GeneratedCode\Indicadores.cs" />
+    <Compile Include="GeneratedCode\ListaVistaCliente.cs" />
+    <Compile Include="GeneratedCode\ListaVistaClientes.cs" />
+    <Compile Include="GeneratedCode\ListaVistaEvento.cs" />
+    <Compile Include="GeneratedCode\ListaVistaEventos.cs" />
+    <Compile Include="GeneratedCode\ListaVistaUsuario.cs" />
+    <Compile Include="GeneratedCode\ListaVistaUsuarios.cs" />
+    <Compile Include="GeneratedCode\Municipio.cs" />
+    <Compile Include="GeneratedCode\Municipios.cs" />
+    <Compile Include="GeneratedCode\ProductoFinanciero.cs" />
+    <Compile Include="GeneratedCode\ProductosFinancieros.cs" />
+    <Compile Include="GeneratedCode\SectoresProductivos.cs" />
+    <Compile Include="GeneratedCode\SectorProductivo.cs" />
+    <Compile Include="GeneratedCode\Sucursal.cs" />
+    <Compile Include="GeneratedCode\Sucursales.cs" />
+    <Compile Include="GeneratedCode\TipoEvento.cs" />
+    <Compile Include="GeneratedCode\TiposEventos.cs" />
+    <Compile Include="GeneratedCode\Usuario.cs" />
+    <Compile Include="GeneratedCode\Usuarios.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Roles="DataContractRole" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

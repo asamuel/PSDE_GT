@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ProgramaSDE1" Class="PSDE_DALDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=ProgramaSDE1;Persist Security Info=True;User ID=sa" SettingsObjectName="PSDE_SERVICE.DataAccess.Properties.Settings" SettingsPropertyName="ProgramaSDE1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CategoriaUsuario" Member="CategoriaUsuario">
+    <Type Name="CategoriaUsuario">
+      <Column Name="IdCategoria" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="CategoriaUsuario_Usuario" Member="Usuario" ThisKey="IdCategoria" OtherKey="CodCategoriaUsuario" Type="Usuario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FuenteFinanciamiento" Member="FuenteFinanciamiento">
+    <Type Name="FuenteFinanciamiento">
+      <Column Name="idFF" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="FuenteFinanciamiento_DetalleConvenio" Member="DetalleConvenio" ThisKey="idFF" OtherKey="CodFuentF" Type="DetalleConvenio" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Departamento" Member="Departamento">
+    <Type Name="Departamento">
+      <Column Name="idDepartamento" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="Departamento_Municipio" Member="Municipio" ThisKey="idDepartamento" OtherKey="idDepartamento" Type="Municipio" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Municipio" Member="Municipio">
+    <Type Name="Municipio">
+      <Column Name="idMunicipio" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="idDepartamento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Municipio_Sucursal" Member="Sucursal" ThisKey="idMunicipio" OtherKey="idMunicipio" Type="Sucursal" />
+      <Association Name="Municipio_Cliente" Member="Cliente" ThisKey="idMunicipio" OtherKey="CodMunicipio" Type="Cliente" />
+      <Association Name="Departamento_Municipio" Member="Departamento" ThisKey="idDepartamento" OtherKey="idDepartamento" Type="Departamento" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sucursal" Member="Sucursal">
+    <Type Name="Sucursal">
+      <Column Name="IdSucursal" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="responsable" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="idMunicipio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="telefono" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Sucursal_Contrato" Member="Contrato" ThisKey="IdSucursal" OtherKey="CodSucursal" Type="Contrato" />
+      <Association Name="Municipio_Sucursal" Member="Municipio" ThisKey="idMunicipio" OtherKey="idMunicipio" Type="Municipio" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SectorProductivo" Member="SectorProductivo">
+    <Type Name="SectorProductivo">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductoFinanciero" Member="ProductoFinanciero">
+    <Type Name="ProductoFinanciero">
+      <Column Name="IdProducto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="ProductoFinanciero_DetalleConvenio" Member="DetalleConvenio" ThisKey="IdProducto" OtherKey="CodProducto" Type="DetalleConvenio" />
+      <Association Name="ProductoFinanciero_Contrato" Member="Contrato" ThisKey="IdProducto" OtherKey="CodProductoFinanciero" Type="Contrato" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuario" Member="Usuario">
+    <Type Name="Usuario">
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CodCategoriaUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Celular" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="Responsable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Usuario_Usuario" Member="Usuario2" ThisKey="IdUsuario" OtherKey="Responsable" Type="Usuario" />
+      <Association Name="Usuario_Historial" Member="Historial" ThisKey="IdUsuario" OtherKey="IdUsuario" Type="Historial" />
+      <Association Name="Usuario_Contrato" Member="Contrato" ThisKey="IdUsuario" OtherKey="CodUsuario" Type="Contrato" />
+      <Association Name="CategoriaUsuario_Usuario" Member="CategoriaUsuario" ThisKey="CodCategoriaUsuario" OtherKey="IdCategoria" Type="CategoriaUsuario" IsForeignKey="true" />
+      <Association Name="Usuario_Usuario" Member="Usuario1" ThisKey="Responsable" OtherKey="IdUsuario" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TipoEvento" Member="TipoEvento">
+    <Type Name="TipoEvento">
+      <Column Name="IdTipoEvento" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Evento" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="TipoEvento_Eventos" Member="Eventos" ThisKey="IdTipoEvento" OtherKey="CodTipoEvento" Type="Eventos" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Eventos" Member="Eventos">
+    <Type Name="Eventos">
+      <Column Name="IdEvento" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CodTipoEvento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TituloEvento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Eventos_General" Member="General" ThisKey="IdEvento" OtherKey="IdEvento" Type="General" />
+      <Association Name="TipoEvento_Eventos" Member="TipoEvento" ThisKey="CodTipoEvento" OtherKey="IdTipoEvento" Type="TipoEvento" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Indicador" Member="Indicador">
+    <Type Name="Indicador">
+      <Column Name="IdIndicador" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombreIndicador" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="Indicador_GeneralDetalle" Member="GeneralDetalle" ThisKey="IdIndicador" OtherKey="IdIndicador" Type="GeneralDetalle" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Convenio" Member="Convenio">
+    <Type Name="Convenio">
+      <Column Name="IdC" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FechaInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaFinal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TotalClientes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MontoFF" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MontoP" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="Convenio_DetalleConvenio" Member="DetalleConvenio" ThisKey="IdC" OtherKey="CodConvenio" Type="DetalleConvenio" />
+      <Association Name="Convenio_Contrato" Member="Contrato" ThisKey="IdC" OtherKey="CodConvenio" Type="Contrato" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DetalleConvenio" Member="DetalleConvenio">
+    <Type Name="DetalleConvenio">
+      <Column Name="IdDC" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CodConvenio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CodFuentF" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CodProducto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroClientes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InversionCliente" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="Convenio_DetalleConvenio" Member="Convenio" ThisKey="CodConvenio" OtherKey="IdC" Type="Convenio" IsForeignKey="true" />
+      <Association Name="FuenteFinanciamiento_DetalleConvenio" Member="FuenteFinanciamiento" ThisKey="CodFuentF" OtherKey="idFF" Type="FuenteFinanciamiento" IsForeignKey="true" />
+      <Association Name="ProductoFinanciero_DetalleConvenio" Member="ProductoFinanciero" ThisKey="CodProducto" OtherKey="IdProducto" Type="ProductoFinanciero" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Historial" Member="Historial">
+    <Type Name="Historial">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FechaInicio" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaFin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Usuario_Historial" Member="Usuario" ThisKey="IdUsuario" OtherKey="IdUsuario" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cliente" Member="Cliente">
+    <Type Name="Cliente">
+      <Column Name="IdCliente" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="Sexo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="Edad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Comarca" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="CodWeb" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CodMunicipio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Cliente_Contrato" Member="Contrato" ThisKey="IdCliente" OtherKey="CodCliente" Type="Contrato" />
+      <Association Name="Municipio_Cliente" Member="Municipio" ThisKey="CodMunicipio" OtherKey="idMunicipio" Type="Municipio" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contrato" Member="Contrato">
+    <Type Name="Contrato">
+      <Column Name="IdContrato" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CodContrato" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CodCliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CodUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CodSucursal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CodConvenio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CodSectorProductivo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CodProductoFinanciero" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MontoOtorgado" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="FechaDesembolso" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Contrato_General" Member="General" ThisKey="IdContrato" OtherKey="IdContrato" Type="General" />
+      <Association Name="Cliente_Contrato" Member="Cliente" ThisKey="CodCliente" OtherKey="IdCliente" Type="Cliente" IsForeignKey="true" />
+      <Association Name="Convenio_Contrato" Member="Convenio" ThisKey="CodConvenio" OtherKey="IdC" Type="Convenio" IsForeignKey="true" />
+      <Association Name="ProductoFinanciero_Contrato" Member="ProductoFinanciero" ThisKey="CodProductoFinanciero" OtherKey="IdProducto" Type="ProductoFinanciero" IsForeignKey="true" />
+      <Association Name="Sucursal_Contrato" Member="Sucursal" ThisKey="CodSucursal" OtherKey="IdSucursal" Type="Sucursal" IsForeignKey="true" />
+      <Association Name="Usuario_Contrato" Member="Usuario" ThisKey="CodUsuario" OtherKey="IdUsuario" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GeneralDetalle" Member="GeneralDetalle">
+    <Type Name="GeneralDetalle">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdIndicador" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AvanceCuantitativo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CodEvento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Indicador_GeneralDetalle" Member="Indicador" ThisKey="IdIndicador" OtherKey="IdIndicador" Type="Indicador" IsForeignKey="true" />
+      <Association Name="General_GeneralDetalle" Member="General" ThisKey="CodEvento" OtherKey="Id" Type="General" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.General" Member="General">
+    <Type Name="General">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdEvento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdContrato" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EventosPactados" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EventosEjecutados" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaFin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Otros" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="General_GeneralDetalle" Member="GeneralDetalle" ThisKey="Id" OtherKey="CodEvento" Type="GeneralDetalle" />
+      <Association Name="Contrato_General" Member="Contrato" ThisKey="IdContrato" OtherKey="IdContrato" Type="Contrato" IsForeignKey="true" />
+      <Association Name="Eventos_General" Member="Eventos" ThisKey="IdEvento" OtherKey="IdEvento" Type="Eventos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VistaClienteLista" Member="VistaClienteLista">
+    <Type Name="VistaClienteLista">
+      <Column Name="IdCliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="Cédula" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="Edad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Teléfono" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Dirección" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Comarca" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Municipio" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="[Código Web]" Member="Código_Web" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Género" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VistaUsuarioLista" Member="VistaUsuarioLista">
+    <Type Name="VistaUsuarioLista">
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Celular" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="Categoria" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="Responsable" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VistaEventos" Member="VistaEventos">
+    <Type Name="VistaEventos">
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="[Titulo del Evento]" Member="Titulo_del_Evento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="[Tipo de Evento]" Member="Tipo_de_Evento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="[Eventos Pactados]" Member="Eventos_Pactados" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Eventos Ejecutados]" Member="Eventos_Ejecutados" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Fecha Inicio]" Member="Fecha_Inicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[Fecha Fin]" Member="Fecha_Fin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Otros" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.insertcategoriausuario" Method="insertcategoriausuario">
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updatecategoriausuario" Method="updatecategoriausuario">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.deletecategoriausuario" Method="deletecategoriausuario">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.deletefuentefinanciamiento" Method="deletefuentefinanciamiento">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insertfuentefinanciamiento" Method="insertfuentefinanciamiento">
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updatefuentefinanciamiento" Method="updatefuentefinanciamiento">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insertDepartamento" Method="insertDepartamento">
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.deleteDepartamento" Method="deleteDepartamento">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updateDepartamento" Method="updateDepartamento">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.MunicipioDelete" Method="MunicipioDelete">
+    <Parameter Name="IdMunicipio" Parameter="idMunicipio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.MunicipioInsert" Method="MunicipioInsert">
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="idDepartamento" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.MunicipioUpdate" Method="MunicipioUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="idDepartamento" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SucursalDelete" Method="SucursalDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SucursalInsert" Method="SucursalInsert">
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="responsable" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="idMunicipio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="telefono" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SucursalUpdate" Method="SucursalUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="responsable" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="idMunicipio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="telefono" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ProductoFinancieroDelete" Method="ProductoFinancieroDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ProductoFinancieroInsert" Method="ProductoFinancieroInsert">
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ProductoFinancieroUpdate" Method="ProductoFinancieroUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SectorProductivoDelete" Method="SectorProductivoDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SectorProductivoInsert" Method="SectorProductivoInsert">
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SectorProductivoUpdate" Method="SectorProductivoUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UsuarioDelete" Method="UsuarioDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UsuarioUpdate" Method="UsuarioUpdate">
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodCategoriaUsuario" Parameter="codCategoriaUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Apellido" Parameter="apellido" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Telefono" Parameter="telefono" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Direccion" Parameter="direccion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Celular" Parameter="celular" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Cedula" Parameter="cedula" Type="System.String" DbType="VarChar(16)" />
+    <Parameter Name="Responsable" Parameter="responsable" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UuarioInsert" Method="UuarioInsert">
+    <Parameter Name="CodCategoriaUsuario" Parameter="codCategoriaUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Apellido" Parameter="apellido" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Telefono" Parameter="telefono" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Direccion" Parameter="direccion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Celular" Parameter="celular" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Cedula" Parameter="cedula" Type="System.String" DbType="VarChar(16)" />
+    <Parameter Name="Responsable" Parameter="responsable" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.TipoEventoDelete" Method="TipoEventoDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.TipoEventoInsert" Method="TipoEventoInsert">
+    <Parameter Name="Evento" Parameter="evento" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.TipoEventoUpdate" Method="TipoEventoUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Evento" Parameter="evento" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EventoDelete" Method="EventoDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EventoInsert" Method="EventoInsert">
+    <Parameter Name="CodTipoEvento" Parameter="codTipoEvento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TituloEvento" Parameter="tituloEvento" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EventoUpdate" Method="EventoUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodTipoEvento" Parameter="codTipoEvento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TituloEvento" Parameter="tituloEvento" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.deleteindicador" Method="deleteindicador">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insertindicador" Method="insertindicador">
+    <Parameter Name="NombreIndicador" Parameter="nombreIndicador" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updateindicador" Method="updateindicador">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NombreIndicador" Parameter="nombreIndicador" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ConvenioDelete" Method="ConvenioDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ConvenioInsert" Method="ConvenioInsert">
+    <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaFinal" Parameter="fechaFinal" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TotalClientes" Parameter="totalClientes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MontoFF" Parameter="montoFF" Type="System.Double" DbType="Float" />
+    <Parameter Name="MontoP" Parameter="montoP" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ConvenioUpdate" Method="ConvenioUpdate">
+    <Parameter Name="IdC" Parameter="idC" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaFinal" Parameter="fechaFinal" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TotalClientes" Parameter="totalClientes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MontoFF" Parameter="montoFF" Type="System.Double" DbType="Float" />
+    <Parameter Name="MontoP" Parameter="montoP" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DetalleConvenioDelete" Method="DetalleConvenioDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DetalleConvenioInsert" Method="DetalleConvenioInsert">
+    <Parameter Name="CodConvenio" Parameter="codConvenio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodFuentF" Parameter="codFuentF" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodProducto" Parameter="codProducto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NumeroClientes" Parameter="numeroClientes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="InversionCliente" Parameter="inversionCliente" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DetalleConvenioUpdate" Method="DetalleConvenioUpdate">
+    <Parameter Name="IdDC" Parameter="idDC" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodConvenio" Parameter="codConvenio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodFuentF" Parameter="codFuentF" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodProducto" Parameter="codProducto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NumeroClientes" Parameter="numeroClientes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="InversionCliente" Parameter="inversionCliente" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.HistorialDelete" Method="HistorialDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.HistorialInsert" Method="HistorialInsert">
+    <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaFin" Parameter="fechaFin" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.HistorialUpdate" Method="HistorialUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaFin" Parameter="fechaFin" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CoordenadaInsert" Method="CoordenadaInsert">
+    <Parameter Name="Coordenada_X_UTM" Parameter="coordenada_X_UTM" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Coordenada_Y_UTM" Parameter="coordenada_Y_UTM" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Coordenada_Y_GMS" Parameter="coordenada_Y_GMS" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Coordenada_X_GMS" Parameter="coordenada_X_GMS" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CoordenadasDelete" Method="CoordenadasDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CoordenaUpdate" Method="CoordenaUpdate">
+    <Parameter Name="IdCoordenada" Parameter="idCoordenada" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Coordenada_X_UTM" Parameter="coordenada_X_UTM" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Coordenada_Y_UTM" Parameter="coordenada_Y_UTM" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Coordenada_Y_GMS" Parameter="coordenada_Y_GMS" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Coordenada_X_GMS" Parameter="coordenada_X_GMS" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ClienteDelete" Method="ClienteDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ClienteInsert" Method="ClienteInsert">
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="Apellido" Parameter="apellido" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="Sexo" Parameter="sexo" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Cedula" Parameter="cedula" Type="System.String" DbType="VarChar(16)" />
+    <Parameter Name="Edad" Parameter="edad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Telefono" Parameter="telefono" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="Direccion" Parameter="direccion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Comarca" Parameter="comarca" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="CodWeb" Parameter="codWeb" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="CodMunicipio" Parameter="codMunicipio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ClienteUpdate" Method="ClienteUpdate">
+    <Parameter Name="IdCliente" Parameter="idCliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="Apellido" Parameter="apellido" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="Sexo" Parameter="sexo" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Cedula" Parameter="cedula" Type="System.String" DbType="VarChar(16)" />
+    <Parameter Name="Edad" Parameter="edad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Telefono" Parameter="telefono" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="Direccion" Parameter="direccion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Comarca" Parameter="comarca" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="CodWeb" Parameter="codWeb" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="CodMunicipio" Parameter="codMunicipio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FincaDelete" Method="FincaDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FincaInsert" Method="FincaInsert">
+    <Parameter Name="HaTotalFinca" Parameter="haTotalFinca" Type="System.Double" DbType="Float" />
+    <Parameter Name="HaEfectiva" Parameter="haEfectiva" Type="System.Double" DbType="Float" />
+    <Parameter Name="UsoActualSuelo" Parameter="usoActualSuelo" Type="System.Double" DbType="Float" />
+    <Parameter Name="CodCliente" Parameter="codCliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodCoordenada" Parameter="codCoordenada" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FincaUpdate" Method="FincaUpdate">
+    <Parameter Name="IdFinca" Parameter="idFinca" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HaTotalFinca" Parameter="haTotalFinca" Type="System.Double" DbType="Float" />
+    <Parameter Name="HaEfectiva" Parameter="haEfectiva" Type="System.Double" DbType="Float" />
+    <Parameter Name="UsoActualSuelo" Parameter="usoActualSuelo" Type="System.Double" DbType="Float" />
+    <Parameter Name="CodCliente" Parameter="codCliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodCoordenada" Parameter="codCoordenada" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ContratoInsert" Method="ContratoInsert">
+    <Parameter Name="CodContrato" Parameter="codContrato" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodCliente" Parameter="codCliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodUsuario" Parameter="codUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodSucursal" Parameter="codSucursal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodConvenio" Parameter="codConvenio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodSectorFinanciero" Parameter="codSectorFinanciero" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodProductoFinanciero" Parameter="codProductoFinanciero" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MontoOtorgado" Parameter="montoOtorgado" Type="System.Double" DbType="Float" />
+    <Parameter Name="FechaDesembolso" Parameter="fechaDesembolso" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ContratoDelete" Method="ContratoDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ContratoUpdate" Method="ContratoUpdate">
+    <Parameter Name="IdContrato" Parameter="idContrato" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodContrato" Parameter="codContrato" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodCliente" Parameter="codCliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodUsuario" Parameter="codUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodSucursal" Parameter="codSucursal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodConvenio" Parameter="codConvenio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodSectorFinanciero" Parameter="codSectorFinanciero" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodProductoFinanciero" Parameter="codProductoFinanciero" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MontoOtorgado" Parameter="montoOtorgado" Type="System.Double" DbType="Float" />
+    <Parameter Name="FechaDesembolso" Parameter="fechaDesembolso" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GeneralDetalleDelete" Method="GeneralDetalleDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GeneralDetalleInsert" Method="GeneralDetalleInsert">
+    <Parameter Name="IdIndicador" Parameter="idIndicador" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AvanceCuantitativo" Parameter="avanceCuantitativo" Type="System.Double" DbType="Float" />
+    <Parameter Name="CodEvento" Parameter="codEvento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GeneralDetalleUpdate" Method="GeneralDetalleUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdIndicador" Parameter="idIndicador" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AvanceCuantitativo" Parameter="avanceCuantitativo" Type="System.Double" DbType="Float" />
+    <Parameter Name="CodEvento" Parameter="codEvento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GeneralInsert" Method="GeneralInsert">
+    <Parameter Name="IdEvento" Parameter="idEvento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdContrato" Parameter="idContrato" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EventosPactados" Parameter="eventosPactados" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EventosEjecutados" Parameter="eventosEjecutados" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaFin" Parameter="fechaFin" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Otros" Parameter="otros" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GeneralUpdate" Method="GeneralUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdEvento" Parameter="idEvento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdContrato" Parameter="idContrato" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EventosPactados" Parameter="eventosPactados" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EventosEjecutados" Parameter="eventosEjecutados" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaFin" Parameter="fechaFin" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Otros" Parameter="otros" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GeneralDelete" Method="GeneralDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
