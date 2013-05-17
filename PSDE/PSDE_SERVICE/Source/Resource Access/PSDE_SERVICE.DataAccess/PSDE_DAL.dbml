@@ -146,6 +146,7 @@
       <Column Name="CodWeb" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Column Name="CodMunicipio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Cliente_Contrato" Member="Contrato" ThisKey="IdCliente" OtherKey="CodCliente" Type="Contrato" />
+      <Association Name="Cliente_Finca" Member="Finca" ThisKey="IdCliente" OtherKey="CodCliente" Type="Finca" />
       <Association Name="Municipio_Cliente" Member="Municipio" ThisKey="CodMunicipio" OtherKey="idMunicipio" Type="Municipio" IsForeignKey="true" />
     </Type>
   </Table>
@@ -236,6 +237,20 @@
       <Column Name="[Fecha Fin]" Member="Fecha_Fin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="Estado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Otros" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Finca" Member="Finca">
+    <Type Name="Finca">
+      <Column Name="IdFinca" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HaTotalFinca" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="HaEfectiva" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="UsoActualSuelo" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="CodCliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Coordenada_X_UTM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Coordenada_Y_UTM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Coordenada_Y_GMS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Coordenada_X_GMS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Cliente_Finca" Member="Cliente" ThisKey="CodCliente" OtherKey="IdCliente" Type="Cliente" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.insertcategoriausuario" Method="insertcategoriausuario">
@@ -516,27 +531,6 @@
     <Parameter Name="CodMunicipio" Parameter="codMunicipio" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.FincaDelete" Method="FincaDelete">
-    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.FincaInsert" Method="FincaInsert">
-    <Parameter Name="HaTotalFinca" Parameter="haTotalFinca" Type="System.Double" DbType="Float" />
-    <Parameter Name="HaEfectiva" Parameter="haEfectiva" Type="System.Double" DbType="Float" />
-    <Parameter Name="UsoActualSuelo" Parameter="usoActualSuelo" Type="System.Double" DbType="Float" />
-    <Parameter Name="CodCliente" Parameter="codCliente" Type="System.Int32" DbType="Int" />
-    <Parameter Name="CodCoordenada" Parameter="codCoordenada" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.FincaUpdate" Method="FincaUpdate">
-    <Parameter Name="IdFinca" Parameter="idFinca" Type="System.Int32" DbType="Int" />
-    <Parameter Name="HaTotalFinca" Parameter="haTotalFinca" Type="System.Double" DbType="Float" />
-    <Parameter Name="HaEfectiva" Parameter="haEfectiva" Type="System.Double" DbType="Float" />
-    <Parameter Name="UsoActualSuelo" Parameter="usoActualSuelo" Type="System.Double" DbType="Float" />
-    <Parameter Name="CodCliente" Parameter="codCliente" Type="System.Int32" DbType="Int" />
-    <Parameter Name="CodCoordenada" Parameter="codCoordenada" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.ContratoInsert" Method="ContratoInsert">
     <Parameter Name="CodContrato" Parameter="codContrato" Type="System.Int32" DbType="Int" />
     <Parameter Name="CodCliente" Parameter="codCliente" Type="System.Int32" DbType="Int" />
@@ -610,6 +604,33 @@
   </Function>
   <Function Name="dbo.GeneralDelete" Method="GeneralDelete">
     <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FincaDelete" Method="FincaDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FincaInsert" Method="FincaInsert">
+    <Parameter Name="HaTotalFinca" Parameter="haTotalFinca" Type="System.Double" DbType="Float" />
+    <Parameter Name="HaEfectiva" Parameter="haEfectiva" Type="System.Double" DbType="Float" />
+    <Parameter Name="UsoActualSuelo" Parameter="usoActualSuelo" Type="System.Double" DbType="Float" />
+    <Parameter Name="CodCliente" Parameter="codCliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Coordenada_X_UTM" Parameter="coordenada_X_UTM" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Coordenada_Y_UTM" Parameter="coordenada_Y_UTM" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Coordenada_X_GMS" Parameter="coordenada_X_GMS" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Coordenada_Y_GMS" Parameter="coordenada_Y_GMS" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FincaUpdate" Method="FincaUpdate">
+    <Parameter Name="IdFinca" Parameter="idFinca" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HaTotalFinca" Parameter="haTotalFinca" Type="System.Double" DbType="Float" />
+    <Parameter Name="HaEfectiva" Parameter="haEfectiva" Type="System.Double" DbType="Float" />
+    <Parameter Name="UsoActualSuelo" Parameter="usoActualSuelo" Type="System.Double" DbType="Float" />
+    <Parameter Name="CodCliente" Parameter="codCliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Coordenada_X_UTM" Parameter="coordenada_X_UTM" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Coordenada_Y_UTM" Parameter="coordenada_Y_UTM" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Coordenada_X_GMS" Parameter="coordenada_X_GMS" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Coordenada_Y_GMS" Parameter="coordenada_Y_GMS" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

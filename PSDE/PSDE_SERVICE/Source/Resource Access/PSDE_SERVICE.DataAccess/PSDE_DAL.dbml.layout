@@ -129,7 +129,7 @@
         <classShapeMoniker Id="35317645-435d-4185-905d-e53b725cdce3" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(11.875 : 5.75091745577925); (12.25 : 5.37591745577925); (12.25 : 3.98159912109375); (13.125 : 3.98159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(11.875 : 5.75091745577925); (12.0348244349011 : 5.59109302087813 : JumpStart); (12.1526755650989 : 5.47324189068037 : JumpEnd); (12.25 : 5.37591745577925); (12.25 : 3.98159912109375); (13.125 : 3.98159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/PSDE_DALDataContext/ProductoFinanciero/ProductoFinanciero_DetalleConvenio" />
       <nodes>
         <classShapeMoniker Id="7f3e40e7-7a32-4d03-af31-4b6b0f2e85c8" />
@@ -168,28 +168,28 @@
         <elementListCompartment Id="427607da-d179-4e93-8982-e5dc070fe69f" absoluteBounds="4.015, 2.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(6.25 : 3.89296590169271); (6 : 3.89296590169271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(6.25 : 3.89296590169271); (6.20833333333333 : 3.89296590169271 : JumpStart); (6.04166666666667 : 3.89296590169271 : JumpEnd); (6 : 3.89296590169271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/PSDE_DALDataContext/Cliente/Cliente_Contrato" />
       <nodes>
         <classShapeMoniker Id="9a35662f-9641-41fe-9ace-87612242c543" />
         <classShapeMoniker Id="9f29273f-1849-44f9-afd2-385395e4cb16" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(13.125 : 8.34375); (6.20833333333333 : 8.34375 : JumpStart); (6.04166666666667 : 8.34375 : JumpEnd); (5.03125 : 8.34375); (5.03125 : 4.78593180338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(13.125 : 8.34375); (12.1770833333333 : 8.34375 : JumpStart); (12.0104166666667 : 8.34375 : JumpEnd); (7.83333333333333 : 8.34375 : JumpStart); (7.66666666666667 : 8.34375 : JumpEnd); (6.20833333333333 : 8.34375 : JumpStart); (6.04166666666667 : 8.34375 : JumpEnd); (5.66145833333333 : 8.34375 : JumpStart); (5.49479166666667 : 8.34375 : JumpEnd); (5.03125 : 8.34375); (5.03125 : 5.10740397135417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PSDE_DALDataContext/Convenio/Convenio_Contrato" />
       <nodes>
         <classShapeMoniker Id="7634ab64-0d19-4195-b6c8-b70850df5b65" />
         <classShapeMoniker Id="9f29273f-1849-44f9-afd2-385395e4cb16" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(11.78125 : 5.75); (11.78125 : 2.53125); (8.55208333333333 : 2.53125 : JumpStart); (8.38541666666667 : 2.53125 : JumpEnd); (6.20833333333333 : 2.53125 : JumpStart); (6.04166666666667 : 2.53125 : JumpEnd); (6 : 2.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(11.78125 : 5.75); (11.78125 : 2.53125); (10.7083333333333 : 2.53125 : JumpStart); (10.5416666666667 : 2.53125 : JumpEnd); (8.55208333333333 : 2.53125 : JumpStart); (8.38541666666667 : 2.53125 : JumpEnd); (6.20833333333333 : 2.53125 : JumpStart); (6.04166666666667 : 2.53125 : JumpEnd); (6 : 2.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/PSDE_DALDataContext/ProductoFinanciero/ProductoFinanciero_Contrato" />
       <nodes>
         <classShapeMoniker Id="7f3e40e7-7a32-4d03-af31-4b6b0f2e85c8" />
         <classShapeMoniker Id="9f29273f-1849-44f9-afd2-385395e4cb16" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(12.09375 : 9.125); (12.09375 : 2.6406275); (8.55208333333333 : 2.6406275 : JumpStart); (8.38541666666667 : 2.6406275 : JumpEnd); (6.20833333333333 : 2.6406275 : JumpStart); (6.04166666666667 : 2.6406275 : JumpEnd); (6 : 2.6406275)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(12.09375 : 9.125); (12.09375 : 2.6406275); (11.8645833333333 : 2.6406275 : JumpStart); (11.6979166666667 : 2.6406275 : JumpEnd); (10.7083333333333 : 2.6406275 : JumpStart); (10.5416666666667 : 2.6406275 : JumpEnd); (8.55208333333333 : 2.6406275 : JumpStart); (8.38541666666667 : 2.6406275 : JumpEnd); (6.20833333333333 : 2.6406275 : JumpStart); (6.04166666666667 : 2.6406275 : JumpEnd); (6 : 2.6406275)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/PSDE_DALDataContext/Sucursal/Sucursal_Contrato" />
       <nodes>
         <classShapeMoniker Id="858db769-d284-4322-99f5-450498209313" />
@@ -209,7 +209,7 @@
         <elementListCompartment Id="07facca3-2d73-4f0a-9483-f2770690079e" absoluteBounds="3.6399999999999997, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.625 : 1.09699625651042); (3.625 : 1.09699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.625 : 1.09699625651042); (3.625 : 1.09699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PSDE_DALDataContext/Indicador/Indicador_GeneralDetalle" />
       <nodes>
         <classShapeMoniker Id="06b6de3e-8e68-43db-8410-dcb66c3cebc1" />
@@ -222,14 +222,14 @@
         <elementListCompartment Id="b04c2280-01d5-46c0-8acc-09f4e67ddaff" absoluteBounds="4.39, 12.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(6.125 : 12); (6.125 : 1.29459757486979); (5.625 : 1.29459757486979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(6.125 : 12); (6.125 : 1.38544840494792); (5.625 : 1.38544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PSDE_DALDataContext/General/General_GeneralDetalle" />
       <nodes>
         <classShapeMoniker Id="e4eee6dd-03ce-45fc-a5ee-855c37e9ab7c" />
         <classShapeMoniker Id="5c0f6e3e-6c6d-44d1-8a3e-261824539a55" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.578125 : 4.78593180338542); (5.578125 : 12)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.578125 : 5.10740397135417); (5.578125 : 12)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/PSDE_DALDataContext/Contrato/Contrato_General" />
       <nodes>
         <classShapeMoniker Id="9f29273f-1849-44f9-afd2-385395e4cb16" />
@@ -261,5 +261,18 @@
         <elementListCompartment Id="b1c0b2c7-ee8b-47bb-bea2-13a73503e682" absoluteBounds="5.64, 16.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="0ccb04fd-fdf0-4b6c-aa54-fea8aec81274" absoluteBounds="1.125, 4.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/PSDE_DALDataContext/Finca" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23297f42-ca5e-4c8b-8f45-422c8875de6e" absoluteBounds="1.1400000000000001, 5.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.25 : 5.5473046875); (6.20833333333333 : 5.5473046875 : JumpStart); (6.04166666666667 : 5.5473046875 : JumpEnd); (5.66145833333333 : 5.5473046875 : JumpStart); (5.49479166666667 : 5.5473046875 : JumpEnd); (5.11458333333333 : 5.5473046875 : JumpStart); (4.94791666666667 : 5.5473046875 : JumpEnd); (3.125 : 5.5473046875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PSDE_DALDataContext/Cliente/Cliente_Finca" />
+      <nodes>
+        <classShapeMoniker Id="9a35662f-9641-41fe-9ace-87612242c543" />
+        <classShapeMoniker Id="0ccb04fd-fdf0-4b6c-aa54-fea8aec81274" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>
