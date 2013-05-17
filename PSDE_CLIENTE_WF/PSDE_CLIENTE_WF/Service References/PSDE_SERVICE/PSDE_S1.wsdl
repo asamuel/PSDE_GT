@@ -185,96 +185,6 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="PSDEWSEndpoint_Agregar_Coordenada_Input_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="PSDEWSEndpoint_Agregar_Coordenada_output_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="PSDEWSEndpoint_Modificar_Coordenada_Input_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="PSDEWSEndpoint_Modificar_Coordenada_output_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="PSDEWSEndpoint_Eliminar_Coordenada_Input_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="PSDEWSEndpoint_Eliminar_Coordenada_output_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
   <wsp:Policy wsu:Id="PSDEWSEndpoint_Modificar_Cliente_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -831,6 +741,36 @@
     </wsp:ExactlyOne>
   </wsp:Policy>
   <wsp:Policy wsu:Id="PSDEWSEndpoint_CargarEventos_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="PSDEWSEndpoint_CargarFinca_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="PSDEWSEndpoint_CargarFinca_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -2347,21 +2287,15 @@
   </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://PSDE.Model/2013/PSDE_SC/Imports">
-      <xsd:import schemaLocation="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc?xsd=xsd2" namespace="http://PSDE.Model/2013/PSDE_SC" />
-      <xsd:import schemaLocation="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc?xsd=xsd1" namespace="http://PSDE.Model/2013/PSDE_DC" />
+      <xsd:import schemaLocation="http://localhost:51928/PSDE_SERVICE.Host/PSDE_SERVICE.svc?xsd=xsd2" namespace="http://PSDE.Model/2013/PSDE_SC" />
+      <xsd:import schemaLocation="http://localhost:51928/PSDE_SERVICE.Host/PSDE_SERVICE.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:51928/PSDE_SERVICE.Host/PSDE_SERVICE.svc?xsd=xsd1" namespace="http://PSDE.Model/2013/PSDE_DC" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="HistorialRQ">
     <wsdl:part name="Historial" element="tns:Historial" />
   </wsdl:message>
   <wsdl:message name="HistorialRS">
-    <wsdl:part name="ResponseRS" element="tns:ResponseRS" />
-  </wsdl:message>
-  <wsdl:message name="CoordenadaRQ">
-    <wsdl:part name="Coordenada" element="tns:Coordenada" />
-  </wsdl:message>
-  <wsdl:message name="CoordenadaRS">
     <wsdl:part name="ResponseRS" element="tns:ResponseRS" />
   </wsdl:message>
   <wsdl:message name="ClienteRQ">
@@ -2407,6 +2341,10 @@
   <wsdl:message name="PSDE_SC_CargarEventos_InputMessage" />
   <wsdl:message name="CargarEventosRS">
     <wsdl:part name="Eventos" element="tns:Eventos" />
+  </wsdl:message>
+  <wsdl:message name="PSDE_SC_CargarFinca_InputMessage" />
+  <wsdl:message name="CargarFincaRS">
+    <wsdl:part name="Fincas" element="tns:Fincas" />
   </wsdl:message>
   <wsdl:message name="SectorProductivoRQ">
     <wsdl:part name="SectorProductivo" element="tns:SectorProductivo" />
@@ -2505,18 +2443,6 @@
       <wsdl:input wsaw:Action="http://PSDE.Model/2013/PSDE_SC/PSDE_SC/Buscar_Historial" name="HistorialRQ" message="tns:HistorialRQ" />
       <wsdl:output wsaw:Action="http://PSDE.Model/2013/PSDE_SC/PSDE_SC/Buscar_HistorialResponse" name="HistorialRS" message="tns:HistorialRS" />
     </wsdl:operation>
-    <wsdl:operation name="Agregar_Coordenada">
-      <wsdl:input wsaw:Action="Agregar_Coordenada" name="CoordenadaRQ" message="tns:CoordenadaRQ" />
-      <wsdl:output wsaw:Action="http://PSDE.Model/2013/PSDE_SC/PSDE_SC/Agregar_CoordenadaResponse" name="CoordenadaRS" message="tns:CoordenadaRS" />
-    </wsdl:operation>
-    <wsdl:operation name="Modificar_Coordenada">
-      <wsdl:input wsaw:Action="Modificar_Coordenada" name="CoordenadaRQ" message="tns:CoordenadaRQ" />
-      <wsdl:output wsaw:Action="http://PSDE.Model/2013/PSDE_SC/PSDE_SC/Modificar_CoordenadaResponse" name="CoordenadaRS" message="tns:CoordenadaRS" />
-    </wsdl:operation>
-    <wsdl:operation name="Eliminar_Coordenada">
-      <wsdl:input wsaw:Action="Eliminar_Coordenada" name="CoordenadaRQ" message="tns:CoordenadaRQ" />
-      <wsdl:output wsaw:Action="http://PSDE.Model/2013/PSDE_SC/PSDE_SC/Eliminar_CoordenadaResponse" name="CoordenadaRS" message="tns:CoordenadaRS" />
-    </wsdl:operation>
     <wsdl:operation name="Modificar_Cliente">
       <wsdl:input wsaw:Action="Modificar_Cliente" name="ClienteRQ" message="tns:ClienteRQ" />
       <wsdl:output wsaw:Action="http://PSDE.Model/2013/PSDE_SC/PSDE_SC/Modificar_ClienteResponse" name="ClienteRS" message="tns:ClienteRS" />
@@ -2592,6 +2518,10 @@
     <wsdl:operation name="CargarEventos">
       <wsdl:input wsaw:Action="CargarEventos" message="tns:PSDE_SC_CargarEventos_InputMessage" />
       <wsdl:output wsaw:Action="http://PSDE.Model/2013/PSDE_SC/PSDE_SC/CargarEventosResponse" name="CargarEventosRS" message="tns:CargarEventosRS" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarFinca">
+      <wsdl:input wsaw:Action="CargarFina" message="tns:PSDE_SC_CargarFinca_InputMessage" />
+      <wsdl:output wsaw:Action="http://PSDE.Model/2013/PSDE_SC/PSDE_SC/CargarFincaResponse" name="CargarFincaRS" message="tns:CargarFincaRS" />
     </wsdl:operation>
     <wsdl:operation name="Buscar_SectorProductivo">
       <wsdl:input wsaw:Action="Buscar_SectorProductivo" name="SectorProductivoRQ" message="tns:SectorProductivoRQ" />
@@ -2823,33 +2753,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Agregar_Coordenada">
-      <soap:operation soapAction="Agregar_Coordenada" style="document" />
-      <wsdl:input name="CoordenadaRQ">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="CoordenadaRS">
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Modificar_Coordenada">
-      <soap:operation soapAction="Modificar_Coordenada" style="document" />
-      <wsdl:input name="CoordenadaRQ">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="CoordenadaRS">
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Eliminar_Coordenada">
-      <soap:operation soapAction="Eliminar_Coordenada" style="document" />
-      <wsdl:input name="CoordenadaRQ">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="CoordenadaRS">
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="Modificar_Cliente">
       <soap:operation soapAction="Modificar_Cliente" style="document" />
       <wsdl:input name="ClienteRQ">
@@ -3018,6 +2921,15 @@
         <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output name="CargarEventosRS">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarFinca">
+      <soap:operation soapAction="CargarFina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CargarFincaRS">
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
@@ -3508,39 +3420,6 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Agregar_Coordenada">
-      <soap12:operation soapAction="Agregar_Coordenada" style="document" />
-      <wsdl:input name="CoordenadaRQ">
-        <wsp:PolicyReference URI="#PSDEWSEndpoint_Agregar_Coordenada_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="CoordenadaRS">
-        <wsp:PolicyReference URI="#PSDEWSEndpoint_Agregar_Coordenada_output_policy" />
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Modificar_Coordenada">
-      <soap12:operation soapAction="Modificar_Coordenada" style="document" />
-      <wsdl:input name="CoordenadaRQ">
-        <wsp:PolicyReference URI="#PSDEWSEndpoint_Modificar_Coordenada_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="CoordenadaRS">
-        <wsp:PolicyReference URI="#PSDEWSEndpoint_Modificar_Coordenada_output_policy" />
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Eliminar_Coordenada">
-      <soap12:operation soapAction="Eliminar_Coordenada" style="document" />
-      <wsdl:input name="CoordenadaRQ">
-        <wsp:PolicyReference URI="#PSDEWSEndpoint_Eliminar_Coordenada_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="CoordenadaRS">
-        <wsp:PolicyReference URI="#PSDEWSEndpoint_Eliminar_Coordenada_output_policy" />
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="Modificar_Cliente">
       <soap12:operation soapAction="Modificar_Cliente" style="document" />
       <wsdl:input name="ClienteRQ">
@@ -3747,6 +3626,17 @@
       </wsdl:input>
       <wsdl:output name="CargarEventosRS">
         <wsp:PolicyReference URI="#PSDEWSEndpoint_CargarEventos_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarFinca">
+      <soap12:operation soapAction="CargarFina" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#PSDEWSEndpoint_CargarFinca_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CargarFincaRS">
+        <wsp:PolicyReference URI="#PSDEWSEndpoint_CargarFinca_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
@@ -4303,14 +4193,14 @@
   </wsdl:binding>
   <wsdl:service name="PSDE_S">
     <wsdl:port name="PSDEBasicEndpoint" binding="tns:PSDEBasicEndpoint">
-      <soap:address location="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc/basic" />
+      <soap:address location="http://localhost:51928/PSDE_SERVICE.Host/PSDE_SERVICE.svc/basic" />
     </wsdl:port>
     <wsdl:port name="PSDEWSEndpoint" binding="tns:PSDEWSEndpoint">
-      <soap12:address location="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc" />
+      <soap12:address location="http://localhost:51928/PSDE_SERVICE.Host/PSDE_SERVICE.svc" />
       <wsa10:EndpointReference>
-        <wsa10:Address>http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc</wsa10:Address>
+        <wsa10:Address>http://localhost:51928/PSDE_SERVICE.Host/PSDE_SERVICE.svc</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>Samuel-PC\Samuel</Upn>
+          <Upn>CortezDinarte\Cortez Dinarte</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>

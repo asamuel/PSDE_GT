@@ -39,10 +39,8 @@
             this.tbBuscar = new System.Windows.Forms.TextBox();
             this.dataGridEmpleados = new System.Windows.Forms.DataGridView();
             this.tbEdicion = new System.Windows.Forms.TabPage();
-            this.tbCelular = new System.Windows.Forms.TextBox();
             this.tbApellido = new System.Windows.Forms.TextBox();
             this.tbDireccion = new System.Windows.Forms.TextBox();
-            this.tbtelefono = new System.Windows.Forms.TextBox();
             this.tbCedula = new System.Windows.Forms.TextBox();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,10 +55,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btEliminar = new System.Windows.Forms.Button();
-            this.btModificar = new System.Windows.Forms.Button();
-            this.btNuevo = new System.Windows.Forms.Button();
             this.tbEventos = new System.Windows.Forms.TabPage();
+            this.dataGridEventos = new System.Windows.Forms.DataGridView();
             this.tbEventosRestantes = new System.Windows.Forms.TextBox();
             this.tbApellidoA = new System.Windows.Forms.TextBox();
             this.tbEventosEjecutados = new System.Windows.Forms.TextBox();
@@ -71,7 +67,11 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.dataGridEventos = new System.Windows.Forms.DataGridView();
+            this.btEliminar = new System.Windows.Forms.Button();
+            this.btModificar = new System.Windows.Forms.Button();
+            this.btNuevo = new System.Windows.Forms.Button();
+            this.tbtelefono = new System.Windows.Forms.MaskedTextBox();
+            this.tbCelular = new System.Windows.Forms.MaskedTextBox();
             this.tabControl1.SuspendLayout();
             this.tbClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmpleados)).BeginInit();
@@ -104,9 +104,9 @@
             this.tbClientes.Location = new System.Drawing.Point(4, 23);
             this.tbClientes.Name = "tbClientes";
             this.tbClientes.Padding = new System.Windows.Forms.Padding(3);
-            this.tbClientes.Size = new System.Drawing.Size(849, 309);
+            this.tbClientes.Size = new System.Drawing.Size(849, 326);
             this.tbClientes.TabIndex = 0;
-            this.tbClientes.Text = "Clientes";
+            this.tbClientes.Text = "Empleados";
             this.tbClientes.UseVisualStyleBackColor = true;
             this.tbClientes.Enter += new System.EventHandler(this.tbClientes_Enter);
             // 
@@ -205,9 +205,9 @@
             // tbEdicion
             // 
             this.tbEdicion.Controls.Add(this.tbCelular);
+            this.tbEdicion.Controls.Add(this.tbtelefono);
             this.tbEdicion.Controls.Add(this.tbApellido);
             this.tbEdicion.Controls.Add(this.tbDireccion);
-            this.tbEdicion.Controls.Add(this.tbtelefono);
             this.tbEdicion.Controls.Add(this.tbCedula);
             this.tbEdicion.Controls.Add(this.tbNombre);
             this.tbEdicion.Controls.Add(this.label4);
@@ -225,18 +225,11 @@
             this.tbEdicion.Location = new System.Drawing.Point(4, 23);
             this.tbEdicion.Name = "tbEdicion";
             this.tbEdicion.Padding = new System.Windows.Forms.Padding(3);
-            this.tbEdicion.Size = new System.Drawing.Size(849, 309);
+            this.tbEdicion.Size = new System.Drawing.Size(849, 326);
             this.tbEdicion.TabIndex = 1;
             this.tbEdicion.Text = "Edicion";
             this.tbEdicion.UseVisualStyleBackColor = true;
             this.tbEdicion.Enter += new System.EventHandler(this.tbEdicion_Enter);
-            // 
-            // tbCelular
-            // 
-            this.tbCelular.Location = new System.Drawing.Point(100, 120);
-            this.tbCelular.Name = "tbCelular";
-            this.tbCelular.Size = new System.Drawing.Size(183, 20);
-            this.tbCelular.TabIndex = 4;
             // 
             // tbApellido
             // 
@@ -251,13 +244,6 @@
             this.tbDireccion.Name = "tbDireccion";
             this.tbDireccion.Size = new System.Drawing.Size(183, 20);
             this.tbDireccion.TabIndex = 5;
-            // 
-            // tbtelefono
-            // 
-            this.tbtelefono.Location = new System.Drawing.Point(100, 94);
-            this.tbtelefono.Name = "tbtelefono";
-            this.tbtelefono.Size = new System.Drawing.Size(183, 20);
-            this.tbtelefono.TabIndex = 3;
             // 
             // tbCedula
             // 
@@ -388,36 +374,6 @@
             this.label1.TabIndex = 86;
             this.label1.Text = "Nombre";
             // 
-            // btEliminar
-            // 
-            this.btEliminar.Location = new System.Drawing.Point(865, 84);
-            this.btEliminar.Name = "btEliminar";
-            this.btEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btEliminar.TabIndex = 11;
-            this.btEliminar.Text = "Eliminar";
-            this.btEliminar.UseVisualStyleBackColor = true;
-            this.btEliminar.Click += new System.EventHandler(this.btEliminar_Click);
-            // 
-            // btModificar
-            // 
-            this.btModificar.Location = new System.Drawing.Point(865, 55);
-            this.btModificar.Name = "btModificar";
-            this.btModificar.Size = new System.Drawing.Size(75, 23);
-            this.btModificar.TabIndex = 10;
-            this.btModificar.Text = "Modificar";
-            this.btModificar.UseVisualStyleBackColor = true;
-            this.btModificar.Click += new System.EventHandler(this.btModificar_Click);
-            // 
-            // btNuevo
-            // 
-            this.btNuevo.Location = new System.Drawing.Point(865, 26);
-            this.btNuevo.Name = "btNuevo";
-            this.btNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btNuevo.TabIndex = 9;
-            this.btNuevo.Text = "Nuevo*";
-            this.btNuevo.UseVisualStyleBackColor = true;
-            this.btNuevo.Click += new System.EventHandler(this.btNuevo_Click);
-            // 
             // tbEventos
             // 
             this.tbEventos.Controls.Add(this.dataGridEventos);
@@ -439,6 +395,21 @@
             this.tbEventos.Text = "Eventos";
             this.tbEventos.UseVisualStyleBackColor = true;
             this.tbEventos.Enter += new System.EventHandler(this.tbEventos_Enter);
+            // 
+            // dataGridEventos
+            // 
+            this.dataGridEventos.AllowUserToAddRows = false;
+            this.dataGridEventos.AllowUserToDeleteRows = false;
+            this.dataGridEventos.AllowUserToOrderColumns = true;
+            this.dataGridEventos.AllowUserToResizeColumns = false;
+            this.dataGridEventos.AllowUserToResizeRows = false;
+            this.dataGridEventos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridEventos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridEventos.Location = new System.Drawing.Point(8, 58);
+            this.dataGridEventos.Name = "dataGridEventos";
+            this.dataGridEventos.Size = new System.Drawing.Size(838, 261);
+            this.dataGridEventos.TabIndex = 121;
             // 
             // tbEventosRestantes
             // 
@@ -521,20 +492,51 @@
             this.label14.TabIndex = 116;
             this.label14.Text = "Nombre";
             // 
-            // dataGridEventos
+            // btEliminar
             // 
-            this.dataGridEventos.AllowUserToAddRows = false;
-            this.dataGridEventos.AllowUserToDeleteRows = false;
-            this.dataGridEventos.AllowUserToOrderColumns = true;
-            this.dataGridEventos.AllowUserToResizeColumns = false;
-            this.dataGridEventos.AllowUserToResizeRows = false;
-            this.dataGridEventos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridEventos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridEventos.Location = new System.Drawing.Point(8, 58);
-            this.dataGridEventos.Name = "dataGridEventos";
-            this.dataGridEventos.Size = new System.Drawing.Size(838, 261);
-            this.dataGridEventos.TabIndex = 121;
+            this.btEliminar.Location = new System.Drawing.Point(865, 84);
+            this.btEliminar.Name = "btEliminar";
+            this.btEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btEliminar.TabIndex = 11;
+            this.btEliminar.Text = "Eliminar";
+            this.btEliminar.UseVisualStyleBackColor = true;
+            this.btEliminar.Click += new System.EventHandler(this.btEliminar_Click);
+            // 
+            // btModificar
+            // 
+            this.btModificar.Location = new System.Drawing.Point(865, 55);
+            this.btModificar.Name = "btModificar";
+            this.btModificar.Size = new System.Drawing.Size(75, 23);
+            this.btModificar.TabIndex = 10;
+            this.btModificar.Text = "Modificar";
+            this.btModificar.UseVisualStyleBackColor = true;
+            this.btModificar.Click += new System.EventHandler(this.btModificar_Click);
+            // 
+            // btNuevo
+            // 
+            this.btNuevo.Location = new System.Drawing.Point(865, 26);
+            this.btNuevo.Name = "btNuevo";
+            this.btNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btNuevo.TabIndex = 9;
+            this.btNuevo.Text = "Nuevo*";
+            this.btNuevo.UseVisualStyleBackColor = true;
+            this.btNuevo.Click += new System.EventHandler(this.btNuevo_Click);
+            // 
+            // tbtelefono
+            // 
+            this.tbtelefono.Location = new System.Drawing.Point(100, 95);
+            this.tbtelefono.Mask = "0000-0000";
+            this.tbtelefono.Name = "tbtelefono";
+            this.tbtelefono.Size = new System.Drawing.Size(183, 20);
+            this.tbtelefono.TabIndex = 111;
+            // 
+            // tbCelular
+            // 
+            this.tbCelular.Location = new System.Drawing.Point(100, 120);
+            this.tbCelular.Mask = "0000-0000";
+            this.tbCelular.Name = "tbCelular";
+            this.tbCelular.Size = new System.Drawing.Size(183, 20);
+            this.tbCelular.TabIndex = 112;
             // 
             // EmpleadoWF
             // 
@@ -567,10 +569,8 @@
         private System.Windows.Forms.TextBox tbBuscar;
         private System.Windows.Forms.DataGridView dataGridEmpleados;
         private System.Windows.Forms.TabPage tbEdicion;
-        private System.Windows.Forms.TextBox tbCelular;
         private System.Windows.Forms.TextBox tbApellido;
         private System.Windows.Forms.TextBox tbDireccion;
-        private System.Windows.Forms.TextBox tbtelefono;
         private System.Windows.Forms.TextBox tbCedula;
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.Label label4;
@@ -606,6 +606,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView dataGridEventos;
+        private System.Windows.Forms.MaskedTextBox tbCelular;
+        private System.Windows.Forms.MaskedTextBox tbtelefono;
 
     }
 }

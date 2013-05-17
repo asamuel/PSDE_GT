@@ -22,7 +22,6 @@ namespace PSDE_CLIENTE_WF
         {
             ClienteWF clientefrm  = new ClienteWF();
             clientefrm.MdiParent = this;
-            clientefrm.Text = "Ventana " + childFormNumber++;
             clientefrm.Show();
         }
 

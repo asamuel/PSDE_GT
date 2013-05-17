@@ -45,5 +45,27 @@ namespace PSDE_SERVICE.DataAccess
                 throw;
             }
         }
+
+        public static DataContracts.ListaVistaFincas CargarFincas()
+        {
+            DataContracts.ListaVistaFincas finca = new DataContracts.ListaVistaFincas();
+
+            foreach (VistaFincaLista item in cnx.VistaFincaLista.ToList())
+            {
+                DataContracts.ListaVistaFinca vf = new DataContracts.ListaVistaFinca();
+                vf.IdFinca = item.IdFinca;
+                vf.Cliente = item.Cliente;
+                vf.HaTotalFinca = item.HaTotalFinca;
+                vf.HaEfectiva = item.HaEfectiva;
+                vf.UsoActualSuelo = item.UsoActualSuelo;
+                vf.Coordenada_X_UTM = item.Coordenada_X_UTM;
+                vf.Coordenada_Y_UTM = item.Coordenada_Y_UTM;
+                vf.Coordenada_X_GMS = item.Coordenada_X_GMS;
+                vf.Coordenada_Y_GMS = item.Coordenada_Y_GMS;
+                finca.Add(vf);
+            }
+            return finca;
+        }
+
     }
 }

@@ -386,7 +386,16 @@ namespace PSDE_SERVICE.ServiceImplementation
             return null;
         }
 
+        public virtual MessageContracts.CargarFincaRS CargarFinca()
+        {
+            return null;
+        }
+
         #endregion   
+
+    
+
+    
 
     }
 	
@@ -816,6 +825,13 @@ namespace PSDE_SERVICE.ServiceImplementation
         {
             PSDE_SERVICE.MessageContracts.CargarCategoriasRS res = new MessageContracts.CargarCategoriasRS();
             res.Categorias = DataAccess.CatUsuario_DAL.CargarCategorias();
+            return res;
+        }
+
+        public override MessageContracts.CargarFincaRS  CargarFinca()
+        {
+            PSDE_SERVICE.MessageContracts.CargarFincaRS res = new MessageContracts.CargarFincaRS();
+            res.Fincas = DataAccess.Finca_DAL.CargarFincas();
             return res;
         }
 

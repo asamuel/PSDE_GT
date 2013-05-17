@@ -15,7 +15,7 @@ namespace PSDE_CLIENTE_WF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ClienteWF());
+            Application.Run(new FincaWF());
         }
     }
 }

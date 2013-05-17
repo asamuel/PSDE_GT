@@ -48,6 +48,7 @@
     <Compile Include="GeneratedCode\CargarCategoriasRS.cs" />
     <Compile Include="GeneratedCode\CargarClientesRS.cs" />
     <Compile Include="GeneratedCode\CargarEventosRS.cs" />
+    <Compile Include="GeneratedCode\CargarFincaRS.cs" />
     <Compile Include="GeneratedCode\CargarUsuariosRS.cs" />
     <Compile Include="GeneratedCode\CategoriaUsuarioRQ.cs" />
     <Compile Include="GeneratedCode\CategoriaUsuarioRS.cs" />

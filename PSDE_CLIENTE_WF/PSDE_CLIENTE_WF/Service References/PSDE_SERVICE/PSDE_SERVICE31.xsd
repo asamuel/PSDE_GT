@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://PSDE.Model/2013/PSDE_SC" elementFormDefault="qualified" targetNamespace="http://PSDE.Model/2013/PSDE_SC" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc?xsd=xsd1" namespace="http://PSDE.Model/2013/PSDE_DC" />
+  <xs:import schemaLocation="http://localhost:51928/PSDE_SERVICE.Host/PSDE_SERVICE.svc?xsd=xsd1" namespace="http://PSDE.Model/2013/PSDE_DC" />
   <xs:element xmlns:q1="http://PSDE.Model/2013/PSDE_DC" name="Historial" nillable="true" type="q1:Historial" />
   <xs:element name="ResponseRS" type="xs:int" />
-  <xs:element xmlns:q2="http://PSDE.Model/2013/PSDE_DC" name="Coordenada" nillable="true" type="q2:Coordenada" />
-  <xs:element xmlns:q3="http://PSDE.Model/2013/PSDE_DC" name="Cliente" nillable="true" type="q3:Cliente" />
-  <xs:element xmlns:q4="http://PSDE.Model/2013/PSDE_DC" name="Contrato" nillable="true" type="q4:Contrato" />
-  <xs:element xmlns:q5="http://PSDE.Model/2013/PSDE_DC" name="GeneralDetalle" nillable="true" type="q5:GeneralDetalle" />
-  <xs:element xmlns:q6="http://PSDE.Model/2013/PSDE_DC" name="General" nillable="true" type="q6:General" />
-  <xs:element xmlns:q7="http://PSDE.Model/2013/PSDE_DC" name="Clientes" nillable="true" type="q7:ListaVistaClientes" />
-  <xs:element xmlns:q8="http://PSDE.Model/2013/PSDE_DC" name="Municipios" nillable="true" type="q8:Municipios" />
-  <xs:element xmlns:q9="http://PSDE.Model/2013/PSDE_DC" name="Usuarios" nillable="true" type="q9:ListaVistaUsuarios" />
-  <xs:element xmlns:q10="http://PSDE.Model/2013/PSDE_DC" name="Categorias" nillable="true" type="q10:CategoriasUsuarios" />
-  <xs:element xmlns:q11="http://PSDE.Model/2013/PSDE_DC" name="Eventos" nillable="true" type="q11:ListaVistaEventos" />
+  <xs:element xmlns:q2="http://PSDE.Model/2013/PSDE_DC" name="Cliente" nillable="true" type="q2:Cliente" />
+  <xs:element xmlns:q3="http://PSDE.Model/2013/PSDE_DC" name="Contrato" nillable="true" type="q3:Contrato" />
+  <xs:element xmlns:q4="http://PSDE.Model/2013/PSDE_DC" name="GeneralDetalle" nillable="true" type="q4:GeneralDetalle" />
+  <xs:element xmlns:q5="http://PSDE.Model/2013/PSDE_DC" name="General" nillable="true" type="q5:General" />
+  <xs:element xmlns:q6="http://PSDE.Model/2013/PSDE_DC" name="Clientes" nillable="true" type="q6:ListaVistaClientes" />
+  <xs:element xmlns:q7="http://PSDE.Model/2013/PSDE_DC" name="Municipios" nillable="true" type="q7:Municipios" />
+  <xs:element xmlns:q8="http://PSDE.Model/2013/PSDE_DC" name="Usuarios" nillable="true" type="q8:ListaVistaUsuarios" />
+  <xs:element xmlns:q9="http://PSDE.Model/2013/PSDE_DC" name="Categorias" nillable="true" type="q9:CategoriasUsuarios" />
+  <xs:element xmlns:q10="http://PSDE.Model/2013/PSDE_DC" name="Eventos" nillable="true" type="q10:ListaVistaEventos" />
+  <xs:element xmlns:q11="http://PSDE.Model/2013/PSDE_DC" name="Fincas" nillable="true" type="q11:ListaVistaFincas" />
   <xs:element xmlns:q12="http://PSDE.Model/2013/PSDE_DC" name="SectorProductivo" nillable="true" type="q12:SectorProductivo" />
   <xs:element xmlns:q13="http://PSDE.Model/2013/PSDE_DC" name="ProductoFinanciero" nillable="true" type="q13:ProductoFinanciero" />
   <xs:element xmlns:q14="http://PSDE.Model/2013/PSDE_DC" name="Usuario" nillable="true" type="q14:Usuario" />

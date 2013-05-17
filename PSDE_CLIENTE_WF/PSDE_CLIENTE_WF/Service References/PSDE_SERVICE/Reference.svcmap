@@ -18,13 +18,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:51928/PSDE_SERVICE.Host/PSDE_SERVICE.svc?wsdlwsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PSDE_SERVICE.xsd" MetadataType="Schema" ID="57dcf55f-fae9-4e98-9c7e-06befbafbab5" SourceId="1" SourceUrl="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc?xsd=xsd1" />
-    <MetadataFile FileName="PSDE_SERVICE1.xsd" MetadataType="Schema" ID="a3c685a9-792a-4a3e-859a-c3b04b24d2b4" SourceId="1" SourceUrl="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc?xsd=xsd0" />
-    <MetadataFile FileName="PSDE_S.wsdl" MetadataType="Wsdl" ID="dd9e55e0-0a6a-4e69-9c63-80cceeeb4f23" SourceId="1" SourceUrl="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc?wsdl" />
-    <MetadataFile FileName="PSDE_SERVICE2.xsd" MetadataType="Schema" ID="7e993bfd-d5b1-4ff3-b216-550f0276574d" SourceId="1" SourceUrl="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc?xsd=xsd2" />
+    <MetadataFile FileName="PSDE_SERVICE3.xsd" MetadataType="Schema" ID="6cf4bebb-5ac6-42fe-a212-77a3a8aead38" SourceId="1" SourceUrl="http://localhost:51928/PSDE_SERVICE.Host/PSDE_SERVICE.svc?xsd=xsd0" />
+    <MetadataFile FileName="PSDE_SERVICE31.xsd" MetadataType="Schema" ID="ea1b6920-3988-4c55-9c3b-31050c5ea205" SourceId="1" SourceUrl="http://localhost:51928/PSDE_SERVICE.Host/PSDE_SERVICE.svc?xsd=xsd2" />
+    <MetadataFile FileName="PSDE_SERVICE32.xsd" MetadataType="Schema" ID="72b2965d-281c-4133-8fc2-57fa729b2f46" SourceId="1" SourceUrl="http://localhost:51928/PSDE_SERVICE.Host/PSDE_SERVICE.svc?xsd=xsd1" />
+    <MetadataFile FileName="PSDE_SERVICE.disco" MetadataType="Disco" ID="ae31d6f5-362b-44ed-9f3f-dca807cd7c3c" SourceId="1" SourceUrl="http://localhost:51928/PSDE_SERVICE.Host/PSDE_SERVICE.svc?disco" />
+    <MetadataFile FileName="PSDE_S1.wsdl" MetadataType="Wsdl" ID="c9c86d36-ba26-4f54-a17c-e4e9ab01a389" SourceId="1" SourceUrl="http://localhost:51928/PSDE_SERVICE.Host/PSDE_SERVICE.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

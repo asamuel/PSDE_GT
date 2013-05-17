@@ -13,7 +13,7 @@ namespace PSDE_CLIENTE_WF
     {
         PSDE_SERVICE.PSDE_SCClient psde = new PSDE_SERVICE.PSDE_SCClient("PSDEWSEndpoint");
         PSDE_SERVICE.ListaVistaUsuarios usuarios;
-        PSDE_SERVICE.ListaVistaEventos eventos;
+        //PSDE_SERVICE.ListaVistaEventos eventos;
         int CodEmpleado = 0;
         int obj2 = 0;
         public EmpleadoWF()
@@ -286,8 +286,8 @@ namespace PSDE_CLIENTE_WF
 
         private void cargarEventos()
         {
-            eventos = psde.CargarEventos();
-            dataGridEventos.DataSource = psde.CargarEventos();
+            /*eventos = psde.CargarEventos();
+            dataGridEventos.DataSource = psde.CargarEventos();*/
 
         }
 

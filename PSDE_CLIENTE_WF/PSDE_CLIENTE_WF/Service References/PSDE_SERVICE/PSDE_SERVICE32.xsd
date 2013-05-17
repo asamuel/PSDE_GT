@@ -9,16 +9,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Historial" nillable="true" type="tns:Historial" />
-  <xs:complexType name="Coordenada">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="IdCoordenada" type="xs:int" />
-      <xs:element minOccurs="0" name="Coordenada_X_UTM" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Coordenada_Y_UTM" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Coordenada_X_GMS" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Coordenada_Y_GMS" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Coordenada" nillable="true" type="tns:Coordenada" />
   <xs:complexType name="Cliente">
     <xs:sequence>
       <xs:element minOccurs="0" name="IdCliente" type="xs:int" />
@@ -165,6 +155,26 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ListaVistaEvento" nillable="true" type="tns:ListaVistaEvento" />
+  <xs:complexType name="ListaVistaFincas">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ListaVistaFinca" nillable="true" type="tns:ListaVistaFinca" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListaVistaFincas" nillable="true" type="tns:ListaVistaFincas" />
+  <xs:complexType name="ListaVistaFinca">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdFinca" type="xs:int" />
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HaTotalFinca" type="xs:double" />
+      <xs:element minOccurs="0" name="HaEfectiva" type="xs:double" />
+      <xs:element minOccurs="0" name="UsoActualSuelo" type="xs:double" />
+      <xs:element minOccurs="0" name="Coordenada_X_UTM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Coordenada_Y_UTM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Coordenada_X_GMS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Coordenada_Y_GMS" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListaVistaFinca" nillable="true" type="tns:ListaVistaFinca" />
   <xs:complexType name="SectorProductivo">
     <xs:sequence>
       <xs:element minOccurs="0" name="Id" type="xs:int" />
@@ -237,7 +247,10 @@
       <xs:element minOccurs="0" name="HaEfectiva" type="xs:double" />
       <xs:element minOccurs="0" name="UsoActualSuelo" type="xs:double" />
       <xs:element minOccurs="0" name="CodCliente" type="xs:int" />
-      <xs:element minOccurs="0" name="CodCoordenada" type="xs:int" />
+      <xs:element minOccurs="0" name="Coordenada_X_UTM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Coordenada_Y_UTM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Coordenada_X_GMS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Coordenada_Y_GMS" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Finca" nillable="true" type="tns:Finca" />

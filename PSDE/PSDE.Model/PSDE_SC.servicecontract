@@ -75,6 +75,7 @@
         <operationMoniker Id="3addcac1-a758-4e4d-a642-774453569ebd" />
         <operationMoniker Id="cdcb0e45-1a75-4402-bd65-b45133a44e5a" />
         <operationMoniker Id="e7f204c9-28ee-45c0-9e22-c7d01e6503f6" />
+        <operationMoniker Id="d23dd0a5-4563-4c0e-9823-7242f2875881" />
       </operations>
     </serviceContract>
   </serviceContracts>
@@ -441,6 +442,11 @@
         <messageMoniker Id="a1a5660a-f676-4ca4-961d-84ee865c7939" />
       </response>
     </operation>
+    <operation Id="d23dd0a5-4563-4c0e-9823-7242f2875881" name="CargarFinca" action="http://PSDE.Model/2013/PSDE_SC/PSDE_SC/CargarFinca" isOneWay="false" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WCFOperationContract&quot;&gt;&#xD;&#xA;    &lt;ProtectionLevel&gt;None&lt;/ProtectionLevel&gt;&#xD;&#xA;    &lt;IsInitiating&gt;true&lt;/IsInitiating&gt;&#xD;&#xA;    &lt;IsTerminating&gt;false&lt;/IsTerminating&gt;&#xD;&#xA;    &lt;AsyncPattern&gt;false&lt;/AsyncPattern&gt;&#xD;&#xA;    &lt;ReplyAction /&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;">
+      <response>
+        <messageMoniker Id="b7c06f1c-4b2c-4705-b692-b42cd391ef6d" />
+      </response>
+    </operation>
   </operations>
   <services>
     <service Id="51698dc0-6a53-438f-bcd7-951dc8e5bab8" name="PSDE_S" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WCFService&quot;&gt;&#xD;&#xA;    &lt;ConcurrencyMode&gt;Multiple&lt;/ConcurrencyMode&gt;&#xD;&#xA;    &lt;InstanceContextMode&gt;PerSession&lt;/InstanceContextMode&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;" namespace="http://PSDE.Model/2013/PSDE_SC">
@@ -768,6 +774,11 @@
     <message Id="a1a5660a-f676-4ca4-961d-84ee865c7939" name="CargarEventosRS" namespace="http://PSDE.Model/2013/PSDE_SC" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WCFMessageContract&quot;&gt;&#xD;&#xA;    &lt;IsWrapped&gt;false&lt;/IsWrapped&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;">
       <messageParts>
         <dataContractMessagePart Id="c88fb9a2-9cdb-4633-bbea-74284869a46d" name="Eventos" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WCFDataContractMessagePart&quot;&gt;&#xD;&#xA;    &lt;Namespace&gt;http://PSDE.Model/2013/PSDE_SC&lt;/Namespace&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;" type="modelbus://Microsoft.Practices.ServiceFactory.DataContracts.DataContractDslAdapter/PSDE_DC/ListaVistaEventos/.\PSDE_DC.datacontract%2fe03fd0ae-9504-48a9-ab48-6a51d3402259" />
+      </messageParts>
+    </message>
+    <message Id="b7c06f1c-4b2c-4705-b692-b42cd391ef6d" name="CargarFincaRS" namespace="http://PSDE.Model/2013/PSDE_SC" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WCFMessageContract&quot;&gt;&#xD;&#xA;    &lt;IsWrapped&gt;false&lt;/IsWrapped&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;">
+      <messageParts>
+        <dataContractMessagePart Id="1cafafd8-0277-4548-b5e6-796184b7ed11" name="Fincas" objectExtenderContainer="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;ObjectExtenderContainer xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;ObjectExtenders xsi:type=&quot;WCFDataContractMessagePart&quot;&gt;&#xD;&#xA;    &lt;Namespace&gt;http://PSDE.Model/2013/PSDE_SC&lt;/Namespace&gt;&#xD;&#xA;  &lt;/ObjectExtenders&gt;&#xD;&#xA;&lt;/ObjectExtenderContainer&gt;" type="modelbus://Microsoft.Practices.ServiceFactory.DataContracts.DataContractDslAdapter/PSDE_DC/ListaVistaFincas/.\PSDE_DC.datacontract%2fafb8a609-936d-4975-abc0-544471392df9" />
       </messageParts>
     </message>
   </messages>

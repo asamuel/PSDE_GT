@@ -75,6 +75,8 @@
     <Compile Include="GeneratedCode\ListaVistaClientes.cs" />
     <Compile Include="GeneratedCode\ListaVistaEvento.cs" />
     <Compile Include="GeneratedCode\ListaVistaEventos.cs" />
+    <Compile Include="GeneratedCode\ListaVistaFinca.cs" />
+    <Compile Include="GeneratedCode\ListaVistaFincas.cs" />
     <Compile Include="GeneratedCode\ListaVistaUsuario.cs" />
     <Compile Include="GeneratedCode\ListaVistaUsuarios.cs" />
     <Compile Include="GeneratedCode\Municipio.cs" />

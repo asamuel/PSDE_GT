@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<dataContractDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.625, 20.25" name="PSDE_DC">
+<dataContractDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.625, 23.875" name="PSDE_DC">
   <dataContractModelMoniker Id="7153daaa-baae-47ba-a9c2-680d1dd0b06c" />
   <nestedChildShapes>
     <dataContractCompartmentShape Id="e50b822d-7519-4b34-9d77-4f072b5ce5d6" absoluteBounds="0.625, 0.625, 2, 1.3362939453125002" outlineDashStyle="Solid" outlineThickness="0.0125">
@@ -146,7 +146,7 @@
     <dataContractCollectionShape Id="0e85c890-5948-45bd-b997-8a790993416d" absoluteBounds="3.25, 7.5, 2, 0.375">
       <dataContractCollectionMoniker Id="b93a1101-7ecd-4fc0-8bac-c1c5e90ad3fa" />
     </dataContractCollectionShape>
-    <referenceConnector edgePoints="[(4.25 : 7.14399251302083); (4.25 : 7.5)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="43328c47-57c3-4017-9c01-66b6a2b45c42">
+    <referenceConnector edgePoints="[(4.25 : 7.14399251302083); (4.25 : 7.5)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="43328c47-57c3-4017-9c01-66b6a2b45c42">
       <nodes>
         <dataContractCompartmentShapeMoniker Id="14902d80-b5c6-49b6-b8e9-edda52a5a2d1" />
         <dataContractCollectionShapeMoniker Id="0e85c890-5948-45bd-b997-8a790993416d" />
@@ -206,7 +206,7 @@
     <dataContractCollectionShape Id="95c7389f-ad5e-44fc-87d9-60769f7a1f64" absoluteBounds="3.25, 10.875, 2, 0.375">
       <dataContractCollectionMoniker Id="8764274a-16f4-4d94-bd18-83ff2a91dd8e" />
     </dataContractCollectionShape>
-    <referenceConnector edgePoints="[(4.25 : 10.6151025390625); (4.25 : 10.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="43328c47-57c3-4017-9c01-66b6a2b45c42">
+    <referenceConnector edgePoints="[(4.25 : 10.6151025390625); (4.25 : 10.875)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="43328c47-57c3-4017-9c01-66b6a2b45c42">
       <nodes>
         <dataContractCompartmentShapeMoniker Id="42b5b333-9671-4e7f-81dd-05de263e0033" />
         <dataContractCollectionShapeMoniker Id="95c7389f-ad5e-44fc-87d9-60769f7a1f64" />
@@ -296,7 +296,7 @@
     <dataContractCollectionShape Id="9b7f5550-1912-4463-b26b-97cfc3ab743f" absoluteBounds="0.5, 19.625, 2, 0.375">
       <dataContractCollectionMoniker Id="f5a63eb1-3ac3-46d6-ae16-8756ee281a74" />
     </dataContractCollectionShape>
-    <referenceConnector edgePoints="[(1.5 : 19.3747054036458); (1.5 : 19.625)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="43328c47-57c3-4017-9c01-66b6a2b45c42">
+    <referenceConnector edgePoints="[(1.5 : 19.3747054036458); (1.5 : 19.625)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="43328c47-57c3-4017-9c01-66b6a2b45c42">
       <nodes>
         <dataContractCompartmentShapeMoniker Id="2aad4242-d0ab-445e-8f37-380913b0e09f" />
         <dataContractCollectionShapeMoniker Id="9b7f5550-1912-4463-b26b-97cfc3ab743f" />
@@ -330,6 +330,21 @@
       <nodes>
         <dataContractCompartmentShapeMoniker Id="a1f32f80-a943-4eb4-98c5-430c821d5656" />
         <dataContractCollectionShapeMoniker Id="de32cf75-c32b-4502-91c7-d4a7ed4df509" />
+      </nodes>
+    </referenceConnector>
+    <dataContractCompartmentShape Id="4d101998-8006-4efb-8349-90a74610a2c5" absoluteBounds="0.5, 20.25, 2, 2.4901025390625016" outlineDashStyle="Solid" outlineThickness="0.0125">
+      <dataContractMoniker Id="8be1db30-ed23-496f-893f-ac1d8e0a40c0" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d918df94-219f-482b-adf4-510e53f314b2" absoluteBounds="0.5149999999999999, 20.66, 1.9700000000000002, 1.9801025390625" name="DataMembersCompartment" titleTextColor="Black" itemTextColor="DarkGoldenrod" />
+      </nestedChildShapes>
+    </dataContractCompartmentShape>
+    <dataContractCollectionShape Id="3cd93409-653f-4e60-8221-c868ccdaaa1d" absoluteBounds="0.5, 23.25, 2, 0.375">
+      <dataContractCollectionMoniker Id="afb8a609-936d-4975-abc0-544471392df9" />
+    </dataContractCollectionShape>
+    <referenceConnector edgePoints="[(1.5 : 22.7401025390625); (1.5 : 23.25)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="43328c47-57c3-4017-9c01-66b6a2b45c42">
+      <nodes>
+        <dataContractCompartmentShapeMoniker Id="4d101998-8006-4efb-8349-90a74610a2c5" />
+        <dataContractCollectionShapeMoniker Id="3cd93409-653f-4e60-8221-c868ccdaaa1d" />
       </nodes>
     </referenceConnector>
   </nestedChildShapes>

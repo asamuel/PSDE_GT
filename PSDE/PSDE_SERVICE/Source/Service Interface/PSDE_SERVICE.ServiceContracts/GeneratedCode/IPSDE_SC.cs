@@ -235,6 +235,9 @@ namespace PSDE_SERVICE.ServiceContracts
 [WCF::OperationContract(IsTerminating = false, IsInitiating = true, IsOneWay = false, AsyncPattern = false, Action = "CargarEventos", ProtectionLevel = ProtectionLevel.None)]
 		PSDE_SERVICE.MessageContracts.CargarEventosRS CargarEventos();
 		
+[WCF::OperationContract(IsTerminating = false, IsInitiating = true, IsOneWay = false, AsyncPattern = false, Action = "CargarFina", ProtectionLevel = ProtectionLevel.None)]
+		PSDE_SERVICE.MessageContracts.CargarFincaRS CargarFinca();
+		
 	}
 }
 

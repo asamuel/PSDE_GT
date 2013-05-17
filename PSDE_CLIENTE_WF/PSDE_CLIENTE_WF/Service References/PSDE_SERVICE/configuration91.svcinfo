@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="jPVqjHBestTGzEC2vh+y0bUlS+E=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="BxfBY5Rm2glkFzjhZvFHvFD+ey0=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="PSDEBasicEndpoint">
       <properties>
@@ -777,10 +777,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="PSDEBasicEndpoint" contract="PSDE_SERVICE.PSDE_SC" bindingType="basicHttpBinding" address="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc/basic" bindingConfiguration="PSDEBasicEndpoint">
+    <endpoint name="PSDEBasicEndpoint" contract="PSDE_SERVICE.PSDE_SC" bindingType="basicHttpBinding" address="http://localhost:51928/PSDE_SERVICE.Host/PSDE_SERVICE.svc/basic" bindingConfiguration="PSDEBasicEndpoint">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc/basic</serializedValue>
+          <serializedValue>http://localhost:51928/PSDE_SERVICE.Host/PSDE_SERVICE.svc/basic</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -862,10 +862,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="PSDEWSEndpoint" contract="PSDE_SERVICE.PSDE_SC" bindingType="customBinding" address="http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc" bindingConfiguration="PSDEWSEndpoint">
+    <endpoint name="PSDEWSEndpoint" contract="PSDE_SERVICE.PSDE_SC" bindingType="customBinding" address="http://localhost:51928/PSDE_SERVICE.Host/PSDE_SERVICE.svc" bindingConfiguration="PSDEWSEndpoint">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:62783/PSDE_SERVICE.Host/PSDE_SERVICE.svc</serializedValue>
+          <serializedValue>http://localhost:51928/PSDE_SERVICE.Host/PSDE_SERVICE.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -892,7 +892,7 @@
           <serializedValue>System.ServiceModel.Configuration.UserPrincipalNameElement</serializedValue>
         </property>
         <property path="/identity/userPrincipalName/value" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>Samuel-PC\Samuel</serializedValue>
+          <serializedValue>CortezDinarte\Cortez Dinarte</serializedValue>
         </property>
         <property path="/identity/servicePrincipalName" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.ServicePrincipalNameElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.ServicePrincipalNameElement</serializedValue>

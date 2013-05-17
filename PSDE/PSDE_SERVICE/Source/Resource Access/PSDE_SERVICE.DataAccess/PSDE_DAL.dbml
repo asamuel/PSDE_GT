@@ -253,6 +253,19 @@
       <Association Name="Cliente_Finca" Member="Cliente" ThisKey="CodCliente" OtherKey="IdCliente" Type="Cliente" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.VistaFincaLista" Member="VistaFincaLista">
+    <Type Name="VistaFincaLista">
+      <Column Name="IdFinca" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="HaTotalFinca" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="HaEfectiva" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="UsoActualSuelo" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Coordenada_X_UTM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Coordenada_Y_UTM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Coordenada_X_GMS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Coordenada_Y_GMS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.insertcategoriausuario" Method="insertcategoriausuario">
     <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(12)" />
     <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(100)" />
