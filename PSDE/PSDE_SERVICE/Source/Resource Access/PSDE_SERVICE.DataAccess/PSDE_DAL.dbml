@@ -434,15 +434,6 @@
     <Parameter Name="MontoP" Parameter="montoP" Type="System.Double" DbType="Float" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.ConvenioUpdate" Method="ConvenioUpdate">
-    <Parameter Name="IdC" Parameter="idC" Type="System.Int32" DbType="Int" />
-    <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.DateTime" DbType="DateTime" />
-    <Parameter Name="FechaFinal" Parameter="fechaFinal" Type="System.DateTime" DbType="DateTime" />
-    <Parameter Name="TotalClientes" Parameter="totalClientes" Type="System.Int32" DbType="Int" />
-    <Parameter Name="MontoFF" Parameter="montoFF" Type="System.Double" DbType="Float" />
-    <Parameter Name="MontoP" Parameter="montoP" Type="System.Double" DbType="Float" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.DetalleConvenioDelete" Method="DetalleConvenioDelete">
     <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
@@ -479,25 +470,6 @@
     <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.DateTime" DbType="DateTime" />
     <Parameter Name="FechaFin" Parameter="fechaFin" Type="System.DateTime" DbType="DateTime" />
     <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.CoordenadaInsert" Method="CoordenadaInsert">
-    <Parameter Name="Coordenada_X_UTM" Parameter="coordenada_X_UTM" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="Coordenada_Y_UTM" Parameter="coordenada_Y_UTM" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="Coordenada_Y_GMS" Parameter="coordenada_Y_GMS" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="Coordenada_X_GMS" Parameter="coordenada_X_GMS" Type="System.String" DbType="VarChar(20)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.CoordenadasDelete" Method="CoordenadasDelete">
-    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.CoordenaUpdate" Method="CoordenaUpdate">
-    <Parameter Name="IdCoordenada" Parameter="idCoordenada" Type="System.Int32" DbType="Int" />
-    <Parameter Name="Coordenada_X_UTM" Parameter="coordenada_X_UTM" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="Coordenada_Y_UTM" Parameter="coordenada_Y_UTM" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="Coordenada_Y_GMS" Parameter="coordenada_Y_GMS" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="Coordenada_X_GMS" Parameter="coordenada_X_GMS" Type="System.String" DbType="VarChar(20)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.ClienteDelete" Method="ClienteDelete">
@@ -631,6 +603,15 @@
     <Parameter Name="Coordenada_Y_UTM" Parameter="coordenada_Y_UTM" Type="System.String" DbType="VarChar(50)" />
     <Parameter Name="Coordenada_X_GMS" Parameter="coordenada_X_GMS" Type="System.String" DbType="VarChar(50)" />
     <Parameter Name="Coordenada_Y_GMS" Parameter="coordenada_Y_GMS" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ConvenioUpdate" Method="ConvenioUpdate">
+    <Parameter Name="IdC" Parameter="idC" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaFinal" Parameter="fechaFinal" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TotalClientes" Parameter="totalClientes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MontoFF" Parameter="montoFF" Type="System.Double" DbType="Float" />
+    <Parameter Name="MontoP" Parameter="montoP" Type="System.Double" DbType="Float" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

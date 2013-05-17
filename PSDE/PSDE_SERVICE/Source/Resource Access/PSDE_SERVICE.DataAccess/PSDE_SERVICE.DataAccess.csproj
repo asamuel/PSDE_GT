@@ -50,7 +50,6 @@
     <Compile Include="Cliente_DAL.cs" />
     <Compile Include="Contrato_DAL.cs" />
     <Compile Include="Convenio_DAL.cs" />
-    <Compile Include="Coordenada_DAL.cs" />
     <Compile Include="Departamento_DAL.cs" />
     <Compile Include="DetalleConvenio_DAL.cs" />
     <Compile Include="Evento_DAL.cs" />
