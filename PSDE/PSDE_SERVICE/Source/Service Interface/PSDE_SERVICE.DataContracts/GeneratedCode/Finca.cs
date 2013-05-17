@@ -23,7 +23,10 @@ namespace PSDE_SERVICE.DataContracts
 		private double haEfectiva;
 		private double usoActualSuelo;
 		private int codCliente;
-		private int codCoordenada;
+		private string coordenada_X_UTM;
+		private string coordenada_Y_UTM;
+		private string coordenada_X_GMS;
+		private string coordenada_Y_GMS;
 		
 		[WcfSerialization::DataMember(Name = "IdFinca", IsRequired = false, Order = 0)]
 		public int IdFinca
@@ -60,11 +63,32 @@ namespace PSDE_SERVICE.DataContracts
 		  set { codCliente = value; }
 		}				
 		
-		[WcfSerialization::DataMember(Name = "CodCoordenada", IsRequired = false, Order = 5)]
-		public int CodCoordenada
+		[WcfSerialization::DataMember(Name = "Coordenada_X_UTM", IsRequired = false, Order = 5)]
+		public string Coordenada_X_UTM
 		{
-		  get { return codCoordenada; }
-		  set { codCoordenada = value; }
+		  get { return coordenada_X_UTM; }
+		  set { coordenada_X_UTM = value; }
+		}				
+		
+		[WcfSerialization::DataMember(Name = "Coordenada_Y_UTM", IsRequired = false, Order = 6)]
+		public string Coordenada_Y_UTM
+		{
+		  get { return coordenada_Y_UTM; }
+		  set { coordenada_Y_UTM = value; }
+		}				
+		
+		[WcfSerialization::DataMember(Name = "Coordenada_X_GMS", IsRequired = false, Order = 7)]
+		public string Coordenada_X_GMS
+		{
+		  get { return coordenada_X_GMS; }
+		  set { coordenada_X_GMS = value; }
+		}				
+		
+		[WcfSerialization::DataMember(Name = "Coordenada_Y_GMS", IsRequired = false, Order = 8)]
+		public string Coordenada_Y_GMS
+		{
+		  get { return coordenada_Y_GMS; }
+		  set { coordenada_Y_GMS = value; }
 		}				
 	}
 }
